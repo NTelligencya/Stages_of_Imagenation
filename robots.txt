@@ -1,0 +1,8 @@
+# Robots.txt for Stages of Imagenation
+# https://stagesofimagenation.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://stagesofimagenation.com/sitemap.xml

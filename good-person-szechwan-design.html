@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Good Person of Szechwan | Stage Design Concept</title>
+    <meta name="description" content="A reconstructed stage design for Bertolt Brecht's The Good Person of Szechwan. Post-earthquake rubble landscape with isolated pink elements as defiance against systemic collapse.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --charcoal-900: #0d0d0d;
+            --charcoal-800: #1a1a1a;
+            --charcoal-700: #262626;
+            --charcoal-600: #333333;
+            --stone-grey: #6b6b6b;
+            --ash-grey: #9a9a9a;
+            --dust-grey: #c4c4c4;
+            --ink-white: #f5f5f5;
+            --pink-soft: #e8a0b0;
+            --pink-bright: #ff6b8a;
+            --pink-deep: #c44569;
+            --pink-glow: rgba(232, 160, 176, 0.15);
+            --shadow-deep: 0 25px 60px rgba(0,0,0,.5);
+            --shadow-soft: 0 10px 30px rgba(0,0,0,.3);
+            --radius-lg: 12px;
+            --radius-md: 8px;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Source Sans Pro', 'Segoe UI', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--dust-grey);
+            background: var(--charcoal-900);
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--ink-white);
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--pink-soft);
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+        }
+
+        /* Layout */
+        .page-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 30% 20%, var(--pink-glow) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 80%, rgba(107, 107, 107, 0.1) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .production-tag {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--pink-soft);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--pink-deep);
+        }
+
+        .hero-title {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1.4rem;
+            color: var(--ash-grey);
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 700px;
+            color: var(--dust-grey);
+        }
+
+        /* Featured Image */
+        .featured-image {
+            margin: 60px 0;
+            position: relative;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-deep);
+        }
+
+        .featured-image figcaption {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--stone-grey);
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Design Concept Section */
+        .design-concept {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .concept-header {
+            max-width: 800px;
+            margin-bottom: 60px;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .concept-block {
+            background: linear-gradient(180deg, var(--charcoal-800) 0%, var(--charcoal-900) 100%);
+            border: 1px solid var(--charcoal-600);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .concept-block:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .concept-block.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .concept-block h3 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .concept-block h3::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: var(--pink-soft);
+            border-radius: 2px;
+        }
+
+        /* Character Section */
+        .character-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .character-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .character-visual {
+            position: sticky;
+            top: 40px;
+        }
+
+        .character-image-placeholder {
+            background: linear-gradient(135deg, var(--charcoal-700) 0%, var(--charcoal-800) 100%);
+            border: 1px dashed var(--charcoal-600);
+            border-radius: var(--radius-lg);
+            padding: 60px 40px;
+            text-align: center;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .character-image-placeholder span {
+            color: var(--stone-grey);
+            font-size: 0.9rem;
+        }
+
+        .character-description h2 {
+            margin-bottom: 2rem;
+        }
+
+        .character-detail {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--charcoal-600);
+        }
+
+        .character-detail strong {
+            color: var(--ink-white);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .gallery-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            aspect-ratio: 4/5;
+            background: var(--charcoal-800);
+            border: 1px solid var(--charcoal-600);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item.wide {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        .gallery-item figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: var(--dust-grey);
+            font-size: 0.85rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover figcaption {
+            transform: translateY(0);
+        }
+
+        /* Poster Section */
+        .poster-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .poster-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .poster-item {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s ease;
+        }
+
+        .poster-item:hover {
+            transform: translateY(-8px);
+        }
+
+        .poster-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Dramaturgy Section */
+        .dramaturgy-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .dramaturgy-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .quote-block {
+            background: var(--pink-glow);
+            border-left: 4px solid var(--pink-soft);
+            padding: 24px 28px;
+            margin: 2rem 0;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+
+        .quote-block p {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--ink-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .quote-block cite {
+            font-size: 0.9rem;
+            color: var(--pink-soft);
+            font-style: normal;
+        }
+
+        /* Technical Section */
+        .technical-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+            background: linear-gradient(180deg, var(--charcoal-900) 0%, var(--charcoal-800) 100%);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .tech-card {
+            background: var(--charcoal-900);
+            border: 1px solid var(--charcoal-600);
+            border-radius: var(--radius-md);
+            padding: 24px;
+        }
+
+        .tech-card h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--pink-soft);
+        }
+
+        .tech-list {
+            list-style: none;
+        }
+
+        .tech-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--charcoal-700);
+            font-size: 0.95rem;
+            color: var(--ash-grey);
+        }
+
+        .tech-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: 60px 0 40px;
+            border-top: 1px solid var(--charcoal-600);
+            text-align: center;
+        }
+
+        .footer-title {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--ink-white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-note {
+            font-size: 0.9rem;
+            color: var(--stone-grey);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .concept-grid,
+            .character-grid,
+            .dramaturgy-content {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .poster-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .character-visual {
+                position: relative;
+                top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.wide {
+                grid-column: span 1;
+            }
+
+            .poster-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="production-tag">Reconstructed Design Portfolio</span>
+            <h1 class="hero-title">The Good Person of Szechwan</h1>
+            <p class="hero-subtitle">Bertolt Brecht, 1943</p>
+            <div class="hero-description">
+                <p>A post-earthquake landscape where goodness is economically impossible. Grey rubble stretches across the stageâ€”stone mounds, collapsed dwellings, dust coating everything. A single road forks at centre stage: one path leads to a stone cavity with a painted billboard (the "tobacco shop"), the other to a bed of pink silk sheets beneath a grey gauze tent.</p>
+                <p>The only colour in this devastation is pink: the bedding, a velvet cross-body pouch, and a layer of fluorescent cotton-candy cloud resting on the exposed ceiling raftersâ€”the gods' heaven, doing nothing, going nowhere.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Image -->
+    <figure class="featured-image">
+        <img src="assets/GPset.png" alt="The Good Person of Szechwan - Full stage render showing earthquake rubble landscape with forking road, pink cloud layer above, and the two paths leading to bed and tobacco shop">
+        <figcaption>Theatre-in-the-round staging. Post-earthquake Szechwan: grey rubble, forking road, pink cloud layer on industrial rafters.</figcaption>
+    </figure>
+
+    <!-- Design Concept Section -->
+    <section class="design-concept">
+        <div class="concept-header">
+            <h2>Design Concept</h2>
+            <p>The earthquake as metaphor: the system has already collapsed, everyone is scrabbling through rubble, and into this comes Shen Te with her absurd, beautiful, doomed pink softness. The forking road makes her impossible choice visible as geography before the audience understands it as plot.</p>
+        </div>
+
+        <div class="concept-grid">
+            <div class="concept-block">
+                <h3>The Space</h3>
+                <p>The stage floor is covered entirely in stone mounds, gravel, and earthquake rubble. Grey dust coats everything. A single road of compressed rubble runs from upstage, forking at centre stage into two paths.</p>
+                <p>Stage right leads to a stone cavity with a painted billboard propped before itâ€”facade capitalism over a hole. Stage left leads to a small mound shaped into a bed beneath a grey gauze tent that blends with the surrounding stones.</p>
+                <p>The ceiling is exceptionally high and exposedâ€”visible rafters, industrial theatre bones. Resting on these rafters, a thick layer of fluorescent pink fluff stretches across the entire upper space.</p>
+            </div>
+
+            <div class="concept-block">
+                <h3>Lighting Concept</h3>
+                <p>Predominantly cold, flat, harsh. The grey landscape under unforgiving lightâ€”no shadows to hide in, no warmth. The pink cloud layer glows faintly from within or above, creating a soft rose wash that never quite reaches the stage floor.</p>
+                <p>When the gods depart at the end, the pink rises visibly into the fliesâ€”stagehands' work exposedâ€”leaving only grey and industrial black. No transcendence, just mechanism.</p>
+            </div>
+
+            <div class="concept-block">
+                <h3>The Pink Elements</h3>
+                <p>The silk sheets in rubble aren't pathetic; they're an act of war against despair. The underwear drying on stones. The velvet pouch worn cross-bodyâ€”the only colour Shen Te carries, soft thing in a hard place.</p>
+                <p>When the pouch is opened: stones. The gods' gift is rubble. She fills her one precious possession with the same grey devastation she's trying to escape.</p>
+            </div>
+
+            <div class="concept-block">
+                <h3>The Tobacco Shop</h3>
+                <p>A painted billboard propped against a stone cavity. Commerce as painted lieâ€”the "business" that's supposed to save her is just a word painted over rubble. The sign reads in Chinese characters, suggesting prosperity, but behind it is only a hole in the collapsed earth.</p>
+            </div>
+
+            <div class="concept-block full-width">
+                <h3>Atmospheric Notes</h3>
+                <p>Austerity pushed to the point of beauty. The grey should feel endless, exhausting, inescapableâ€”and then the pink shocks. Not hope exactly, but stubborn refusal. Evidence of a woman's life persisting: silk pillows in rubble, underwear drying in a disaster zone, a velvet pouch carried through broken glass.</p>
+                <p>The audience should feel the gravel under their own feet, the dust in their throats, and understand why someone might sell her soul for a pair of shoes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Section -->
+    <section class="character-section">
+        <div class="character-grid">
+            <div class="character-visual">
+                <figure>
+                    <img src="assets/GPshente.png" alt="Shen Te in grey gauze smock with pink velvet pouch, standing in rubble" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);">
+                    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: var(--stone-grey); font-style: italic;">Shen Te at the intersectionâ€”grey gauze, pink pouch, wounded bare feet</figcaption>
+                </figure>
+            </div>
+            <div class="character-description">
+                <h2>Shen Te / Shui Ta</h2>
+                <p>The same person. The same grey gauze smock. The same pink velvet pouch. The only difference is footwear.</p>
+
+                <div class="character-detail">
+                    <strong>Shen Te</strong>
+                    <p>Bare feet, dirty, wounded. Bloody bandages wrap around her soles and anklesâ€”makeshift dressings already soaked through and grey with dust. Her legs show cuts, scrapes, the evidence of walking through a world made of broken things. She bleeds to exist here.</p>
+                </div>
+
+                <div class="character-detail">
+                    <strong>Shui Ta</strong>
+                    <p>Identical. Same smock, same pouch, same body. But sturdy working shoes on the feet. That's it. The transformation is protectionâ€”the willingness to stop bleeding. The entire moral argument in footwear.</p>
+                </div>
+
+                <div class="character-detail">
+                    <strong>The Costume</strong>
+                    <p>A shapeless grey gauze smockâ€”thin, almost transparent in places, the fabric of the rubble-dwellers. It hangs to mid-calf, loose, offering no shape, no seduction. The gauze has the same dusty, ash-covered quality as everything else. She could almost disappear into the stones.</p>
+                    <p>Across her body, the pink velvet drawstring pouch. The only colour she carries. It sits against the grey gauze like a wound, like a heart worn outside the body.</p>
+                </div>
+
+                <div class="character-detail">
+                    <strong>The Faceless Others</strong>
+                    <p>The peasants, relatives, freeloadersâ€”all in grey gauze, faceless, dusty. They emerge from rubble they're indistinguishable from. Not individuals with stories but need itself, materialising. Shen Te bleeds for people who barely exist as people.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="gallery-header">
+            <h2>Design Gallery</h2>
+            <p>Renders, posters, and production materials for a show that lives only in conversation.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <figure class="gallery-item wide">
+                <img src="assets/GPset2.png" alt="Alternative stage render">
+                <figcaption>The forking road from a different angleâ€”rubble landscape, pink cloud layer</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/GPbed1.png" alt="The pink bed in rubble">
+                <figcaption>Pink silk sheets on a stone moundâ€”tenderness as defiance</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/GPbed2.png" alt="The bed detail">
+                <figcaption>The gauze tent and drying underwearâ€”evidence of life persisting</figcaption>
+            </figure>
+            <figure class="gallery-item wide">
+                <img src="assets/GPgal1.jpeg" alt="Stage detail">
+                <figcaption>Grey devastation with isolated pink elements</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Poster Section -->
+    <section class="poster-section">
+        <div class="concept-header">
+            <h2>Production Posters</h2>
+            <p>Marketing materials for a production that exists only in conversation.</p>
+        </div>
+
+        <div class="poster-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto;">
+            <figure class="poster-item">
+                <img src="assets/GPposter1.png" alt="Production poster - How can one be good and still live?" style="width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-deep);">
+            </figure>
+            <figure class="poster-item">
+                <img src="assets/GPposter2.png" alt="Alternative production poster design" style="width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-deep);">
+            </figure>
+        </div>
+    </section>
+
+    <!-- Dramaturgy Section -->
+    <section class="dramaturgy-section">
+        <div class="concept-header">
+            <h2>Dramaturgical Notes</h2>
+        </div>
+
+        <div class="dramaturgy-content">
+            <div>
+                <h3>The Central Contradiction</h3>
+                <p>Brecht's thesis is brutal: goodness is economically impossible under capitalism. The system demands exploitation to survive. You cannot be good and live. Shen Te isn't weakâ€”she's structurally trapped.</p>
+                <p>The forking road makes this visible. She stands at the intersection for every choice, and we watch her walk one way as herself (barefoot, bleeding, toward the bed) or the other as Shui Ta (sturdy shoes, toward the billboard facade).</p>
+
+                <div class="quote-block">
+                    <p>"How can one be good and still live?"</p>
+                    <cite>â€” The play's central question</cite>
+                </div>
+
+                <p>The gods represent hollow ideology that preaches virtue while ignoring material conditions. Their pink heaven floats above the devastation, decorative, inert. When they flee on their cloud at the end, we see the mechanismâ€”stagehands pulling pink batting into the flies. No transcendence. Just theatre.</p>
+            </div>
+
+            <div>
+                <h3>The Earthquake Setting</h3>
+                <p>Brecht set his play in a fictional "Szechwan" that was never meant to be realistic Chinaâ€”it was a distancing device, allowing Western audiences to see their own economic systems reflected back. This production takes that abstraction further: post-earthquake devastation that could be anywhere, any time.</p>
+                <p>The rubble is universal. The collapse has already happened. Everyone is surviving in the ruins of something that broke long before the play began.</p>
+
+                <h3>The Shoes</h3>
+                <p>Shen Te bleeds to walk through the world. Shui Ta doesn't. That's capitalism's offer: protection costs you your humanity, but bare feet get shredded.</p>
+                <p>The audience watches the same person, same smock, same pink pouchâ€”and understands that the only difference between victim and exploiter is who's willing to let their feet be destroyed.</p>
+
+                <h3>The Pouch Full of Stones</h3>
+                <p>The gods' gift is literally rubble. She carries the weight of the collapsed world in what looks like her only precious thing. Every time she opens it hoping for salvation, there's just more of the same grey devastation. Or she's been collecting stones herself, filling her one soft possession with hardness because that's what survival requires.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Section -->
+    <section class="technical-section">
+        <div class="page-wrapper">
+            <h2>Technical Specifications</h2>
+            <p>Materials and staging notes for the production team.</p>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>Stage Configuration</h4>
+                    <ul class="tech-list">
+                        <li>Thrust or proscenium with high fly tower</li>
+                        <li>Bare stage, exposed rafters</li>
+                        <li>Minimum ceiling height: 8m</li>
+                        <li>Rubble coverage: full stage floor</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>Set Materials</h4>
+                    <ul class="tech-list">
+                        <li>Foam and resin rubble blocks (lightweight)</li>
+                        <li>Compressed gravel path (secured)</li>
+                        <li>Grey gauze tent fabric</li>
+                        <li>Weathered timber billboard frame</li>
+                        <li>Pink polyester batting for cloud layer</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>Lighting</h4>
+                    <ul class="tech-list">
+                        <li>Cold white wash from above</li>
+                        <li>Practical glow within pink cloud layer</li>
+                        <li>Flat, shadowless coverage on rubble</li>
+                        <li>Fly system for cloud exit</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>Costume - Shen Te</h4>
+                    <ul class="tech-list">
+                        <li>Grey gauze smock, mid-calf length</li>
+                        <li>Distressed, dust-treated fabric</li>
+                        <li>Pink velvet drawstring pouch</li>
+                        <li>Bare feet with applied wound prosthetics</li>
+                        <li>Soiled bandage wraps</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>Costume - Shui Ta</h4>
+                    <ul class="tech-list">
+                        <li>Identical grey gauze smock</li>
+                        <li>Same pink velvet pouch</li>
+                        <li>Sturdy leather work boots</li>
+                        <li>Quick-change footwear setup</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>Props</h4>
+                    <ul class="tech-list">
+                        <li>Pink silk sheet set and pillows</li>
+                        <li>Women's underwear (drying line)</li>
+                        <li>Painted billboard sign</li>
+                        <li>Loose stones for pouch</li>
+                        <li>Practical bedding on stone mound</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p class="footer-title">Stages of Imagenation</p>
+        <p class="footer-note">A reconstructed portfolio of theatrical stage designs, transformed from remembered fragments into digital reality through AI image generation. The sketchbooks are gone, but the visions persist.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

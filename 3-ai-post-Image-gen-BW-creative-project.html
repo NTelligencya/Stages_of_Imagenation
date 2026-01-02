@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Wedding | Stage Design Concept</title>
+    <meta name="description" content="A reconstructed stage design for Federico GarcÃ­a Lorca's Blood Wedding. A theatre-in-the-round production set in a dark paper-mÃ¢chÃ© forest with a suspended black stallion and glowing stream.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --charcoal-900: #0d0d0d;
+            --charcoal-800: #1a1a1a;
+            --charcoal-700: #262626;
+            --charcoal-600: #333333;
+            --stone-grey: #6b6b6b;
+            --ash-grey: #9a9a9a;
+            --dust-grey: #c4c4c4;
+            --ink-white: #f5f5f5;
+            --blood-soft: #8b0000;
+            --blood-bright: #a32929;
+            --blood-deep: #4a0000;
+            --ember-gold: #d4a574;
+            --blood-glow: rgba(139, 0, 0, 0.15);
+            --shadow-deep: 0 25px 60px rgba(0,0,0,.5);
+            --shadow-soft: 0 10px 30px rgba(0,0,0,.3);
+            --radius-lg: 12px;
+            --radius-md: 8px;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Source Sans Pro', 'Segoe UI', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--dust-grey);
+            background: var(--charcoal-900);
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--ink-white);
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--blood-soft);
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+        }
+
+        /* Layout */
+        .page-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 30% 20%, var(--blood-glow) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 80%, rgba(107, 107, 107, 0.1) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .production-tag {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--blood-soft);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--blood-deep);
+        }
+
+        .hero-title {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1.4rem;
+            color: var(--ash-grey);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-translation {
+            font-size: 1rem;
+            color: var(--stone-grey);
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 700px;
+            color: var(--dust-grey);
+        }
+
+        /* Featured Image */
+        .featured-image {
+            margin: 60px 0;
+            position: relative;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-deep);
+        }
+
+        .featured-image figcaption {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--stone-grey);
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Design Concept Section */
+        .design-concept {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .concept-header {
+            max-width: 800px;
+            margin-bottom: 60px;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .concept-block {
+            background: linear-gradient(180deg, var(--charcoal-800) 0%, var(--charcoal-900) 100%);
+            border: 1px solid var(--charcoal-600);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .concept-block:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .concept-block.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .concept-block h3 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .concept-block h3::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: var(--blood-soft);
+            border-radius: 2px;
+        }
+
+        /* Acts Section */
+        .acts-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .acts-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .act-card {
+            background: linear-gradient(180deg, var(--charcoal-800) 0%, var(--charcoal-900) 100%);
+            border: 1px solid var(--charcoal-600);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .act-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .act-card.act-one::before {
+            background: linear-gradient(90deg, var(--blood-bright) 0%, var(--blood-soft) 100%);
+        }
+
+        .act-card.act-two::before {
+            background: linear-gradient(90deg, var(--ember-gold) 0%, var(--blood-soft) 100%);
+        }
+
+        .act-card.act-three::before {
+            background: linear-gradient(90deg, var(--blood-deep) 0%, var(--blood-soft) 100%);
+        }
+
+        .act-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .act-card .act-subtitle {
+            font-size: 0.85rem;
+            color: var(--ember-gold);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .act-card p {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .act-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Character Section */
+        .character-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .character-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .character-visual {
+            position: sticky;
+            top: 40px;
+        }
+
+        .character-visual img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-deep);
+        }
+
+        .character-visual figcaption {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--stone-grey);
+            font-style: italic;
+            text-align: center;
+        }
+
+        .character-description h2 {
+            margin-bottom: 2rem;
+        }
+
+        .character-detail {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--charcoal-600);
+        }
+
+        .character-detail strong {
+            color: var(--ink-white);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .gallery-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            aspect-ratio: 4/5;
+            background: var(--charcoal-800);
+            border: 1px solid var(--charcoal-600);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item.wide {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+            aspect-ratio: auto;
+        }
+
+        .gallery-item figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: var(--dust-grey);
+            font-size: 0.85rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover figcaption {
+            transform: translateY(0);
+        }
+
+        /* Poster Section */
+        .poster-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .poster-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .poster-commentary {
+            position: sticky;
+            top: 40px;
+        }
+
+        .poster-commentary h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .poster-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .poster-item {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s ease;
+        }
+
+        .poster-item:hover {
+            transform: translateY(-8px);
+        }
+
+        .poster-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Dramaturgy Section */
+        .dramaturgy-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .dramaturgy-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .quote-block {
+            background: var(--blood-glow);
+            border-left: 4px solid var(--blood-soft);
+            padding: 24px 28px;
+            margin: 2rem 0;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+
+        .quote-block p {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--ink-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .quote-block cite {
+            font-size: 0.9rem;
+            color: var(--blood-soft);
+            font-style: normal;
+        }
+
+        /* Technical Section */
+        .technical-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+            background: linear-gradient(180deg, var(--charcoal-900) 0%, var(--charcoal-800) 100%);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .tech-card {
+            background: var(--charcoal-900);
+            border: 1px solid var(--charcoal-600);
+            border-radius: var(--radius-md);
+            padding: 24px;
+        }
+
+        .tech-card h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--blood-soft);
+        }
+
+        .tech-list {
+            list-style: none;
+        }
+
+        .tech-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--charcoal-700);
+            font-size: 0.95rem;
+            color: var(--ash-grey);
+        }
+
+        .tech-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: 60px 0 40px;
+            border-top: 1px solid var(--charcoal-600);
+            text-align: center;
+        }
+
+        .footer-title {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--ink-white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-note {
+            font-size: 0.9rem;
+            color: var(--stone-grey);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .concept-grid,
+            .character-grid,
+            .dramaturgy-content,
+            .poster-content {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .acts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .character-visual,
+            .poster-commentary {
+                position: relative;
+                top: 0;
+            }
+
+            .poster-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.wide {
+                grid-column: span 1;
+            }
+
+            .gallery-item.tall {
+                grid-row: span 1;
+                aspect-ratio: 4/5;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .poster-grid {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="production-tag">Reconstructed Design Portfolio</span>
+            <h1 class="hero-title">Blood Wedding</h1>
+            <p class="hero-subtitle">Federico GarcÃ­a Lorca, 1932</p>
+            <p class="hero-translation">Bodas de Sangre â€” A Tragedy in Three Acts and Seven Scenes</p>
+            <div class="hero-description">
+                <p>A theatre-in-the-round production set within a dark paper-mÃ¢chÃ© forest. Black rose stalks float downstream through a glowing river that bisects the stage. Above, suspended mid-gallop from a gnarled branch, a paper-mÃ¢chÃ© black stallion with fiery red eyes watches over the unfolding tragedy.</p>
+                <p>This is the horse that Death rides in Act IIIâ€”frozen in eternal motion, a harbinger made material. The forest grows denser through each act until it consumes everyone.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Image -->
+    <figure class="featured-image">
+        <img src="assets/BWhero.png" alt="Blood Wedding - Full stage render showing theatre-in-the-round dark forest with suspended black stallion and glowing stream">
+        <figcaption>Theatre-in-the-round staging. Paper-mÃ¢chÃ© forest, black stream with floating roses, suspended stallion with glowing red eyes.</figcaption>
+    </figure>
+
+    <!-- Design Concept Section -->
+    <section class="design-concept">
+        <div class="concept-header">
+            <h2>Design Concept</h2>
+            <p>The forest as fate. Lorca's tragedy moves inexorably toward violence in the woodsâ€”the place where the Bride and Leonardo flee, where the Bridegroom pursues, where Death waits disguised as a beggar woman. This design makes the forest present from the first moment, surrounding the audience, growing closer with each act until escape becomes impossible.</p>
+        </div>
+
+        <div class="concept-grid">
+            <div class="concept-block">
+                <h3>The Space</h3>
+                <p>Theatre-in-the-round with the audience seated among paper-mÃ¢chÃ© trees. The forest isn't a backdropâ€”it's the architecture of the space itself. Gnarled black trunks rise from the floor, their branches reaching over the audience's heads.</p>
+                <p>A stream of black water runs stage left to right, its surface catching coloured light from below. Black rose stalks and petals float downstream throughout the performanceâ€”the accumulated debris of the play's symbolism, physical evidence of passion bleeding out.</p>
+            </div>
+
+            <div class="concept-block">
+                <h3>The Suspended Horse</h3>
+                <p>Above the stage, caught mid-gallop, a life-size paper-mÃ¢chÃ© black stallion hangs from a dead tree branch. Its eyes glow faint redâ€”practical LEDs embedded in the sculptural form. This is the horse Leonardo rides obsessively, the horse that carries him to the Bride, the horse that Death will mount in Act III.</p>
+                <p>The horse never moves. It doesn't need to. Suspended in eternal motion, it watches everything unfold below with those burning eyes. When the Moon rises in the final act, the horse's eyes flare brighter.</p>
+            </div>
+
+            <div class="concept-block">
+                <h3>Lighting Concept</h3>
+                <p>Act I: Warm amber from oil lamps and candles. Domestic interiors carved out of the forest through pools of light. The trees visible at the edges, waiting.</p>
+                <p>Act II: Harsher, flatter light for the wedding celebration. The joy feels wrongâ€”too bright, too exposed. The forest presses closer in the shadows.</p>
+                <p>Act III: Cold blue moonlight. The forest fully revealed, surrounding everything. The stream glows from beneath. The horse's eyes burn red against the blue.</p>
+            </div>
+
+            <div class="concept-block">
+                <h3>The Stream</h3>
+                <p>Black water flows continuously throughout the performanceâ€”a practical effect using a recirculating channel lined with black plastic. Underwater LEDs shift colour with the lighting states, turning the water blood-red during the final confrontation.</p>
+                <p>Black rose stalks accumulate as the play progresses. By Act III, the stream is choked with themâ€”the weight of everything that's been lost, floating downstream toward an inevitable end.</p>
+            </div>
+
+            <div class="concept-block full-width">
+                <h3>Atmospheric Notes</h3>
+                <p>The forest should feel aliveâ€”not in a friendly, enchanted way, but in the way that ancient woods feel alive at night. Watchful. Patient. The paper-mÃ¢chÃ© texture gives everything a handmade, folkloric quality, as if the set itself were crafted by the same culture that produced the tragedy.</p>
+                <p>Haze throughout. The trees catching light at unexpected angles. The sense that the forest extends beyond what can be seen, that it goes on forever, that there is no way out except through.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acts Section -->
+    <section class="acts-section">
+        <div class="concept-header">
+            <h2>The Three Acts</h2>
+            <p>Lorca's tragedy builds from domestic tension to ritual violence. The forest is always present, but the space transforms around itâ€”intimate interiors giving way to public celebration, finally dissolving into the primordial woods where the vendetta must end.</p>
+        </div>
+
+        <div class="acts-grid">
+            <div class="act-card act-one">
+                <h3>Act I â€” The Preparations</h3>
+                <p class="act-subtitle">Mother's House / Leonardo's House</p>
+                <p>Small pools of amber lamplight carve domestic spaces from the surrounding forest. The trees are visible but held at bay. The stream runs quietly, a few rose stalks floating past. The horse watches, eyes dim.</p>
+                <p>The Mother speaks of knives and blood. Leonardo's horse arrives lathered with sweat. Already the tragedy is set in motion.</p>
+            </div>
+
+            <div class="act-card act-two">
+                <h3>Act II â€” The Wedding</h3>
+                <p class="act-subtitle">The Bride's Cave / The Celebration</p>
+                <p>Harsh white light for the wedding. The forest pushed back but not goneâ€”visible in the corners, waiting. The stream runs faster. More roses accumulate. The horse's eyes pulse with the music.</p>
+                <p>The Bride vanishes with Leonardo. The Bridegroom pursues. The forest opens to receive them all.</p>
+            </div>
+
+            <div class="act-card act-three">
+                <h3>Act III â€” The Forest</h3>
+                <p class="act-subtitle">The Moon / The Confrontation</p>
+                <p>Cold blue moonlight floods the entire space. No more domestic interiorsâ€”only forest, extending into the audience. The stream runs blood-red. The horse's eyes blaze. Death appears as a beggar woman.</p>
+                <p>Two men enter the woods. One will not return. The Moon watches. The horse watches. The forest watches.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character/Costume Section -->
+    <section class="character-section">
+        <div class="character-grid">
+            <div class="character-visual">
+                <figure>
+                    <img src="assets/BwBride1.png" alt="The Bride in costume, leaning against a tree on the forest set" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);">
+                    <figcaption>The Bride in the forestâ€”off-white muslin with black rose appliquÃ©, barefoot on the forest floor</figcaption>
+                </figure>
+            </div>
+            <div class="character-description">
+                <h2>Costume Design</h2>
+                <p>The costumes emerge from the same palette as the forestâ€”blacks, off-whites, the deep crimson of blood and roses. Natural textures: muslin, linen, rough wool. Nothing synthetic, nothing modern. These are clothes that belong to the same world as the paper-mÃ¢chÃ© trees.</p>
+
+                <div class="character-detail">
+                    <strong>The Bride</strong>
+                    <p>A bias-cut gown in off-white muslin, the hem deliberately distressed as if she's been walking through the forest for years. Subtle appliquÃ© of black rose motifs climb from the hem, reaching toward her heart. Barefoot throughoutâ€”she's connected to the earth, to the forest, to the forces that will destroy her.</p>
+                </div>
+
+                <div class="character-detail">
+                    <strong>Leonardo</strong>
+                    <p>Black shirt, black trousers, the clothes of a man who already belongs to the night. A red sash at his waistâ€”the only colour, the blood that will be spilled. His riding boots are practical, worn, the boots of a man who can't stop moving.</p>
+                </div>
+
+                <div class="character-detail">
+                    <strong>The Mother</strong>
+                    <p>Deep mourning black, as if she's already dressed for funerals yet to come. The fabric is heavier than anyone else'sâ€”the weight of grief she carries, the sons already lost to knives. A black mantilla for the wedding that becomes a shroud.</p>
+                </div>
+
+                <div class="character-detail">
+                    <strong>Death (The Beggar Woman)</strong>
+                    <p>Rags that might once have been a wedding dressâ€”yellowed, torn, trailing. She emerges from the forest as if she's been waiting there for centuries. Her face is pale to the point of theatrical makeup, her movements fluid, inhuman. She is the forest made flesh.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="gallery-header">
+            <h2>Design Gallery</h2>
+            <p>Stage renders, scenic elements, and production materials for a forest that exists only in memory and image generation.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <figure class="gallery-item wide">
+                <img src="assets/BW5.png" alt="Full stage render - the forest revealed">
+                <figcaption>The final visionâ€”theatre-in-the-round forest with suspended horse</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/BW4.png" alt="Theatre-in-the-round forest set">
+                <figcaption>First prompt iterationâ€”the forest takes shape</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/BW6.png" alt="Act II staging with rain">
+                <figcaption>Act II transformationâ€”vines enveloping the horse</figcaption>
+            </figure>
+            <figure class="gallery-item wide">
+                <img src="assets/BW11.png" alt="Act III staging - the forest closes in">
+                <figcaption>Act IIIâ€”the forest fully revealed, consuming everything</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/BW1.png" alt="Alternative forest angle">
+                <figcaption>The vision realisedâ€”forest, stream, suspended horse</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/BW2.png" alt="Early design iteration">
+                <figcaption>Early prompt explorationâ€”finding the atmosphere</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/BW3.png" alt="360-degree panorama view">
+                <figcaption>360-degree panoramaâ€”the forest surrounds</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/BW7.png" alt="Detailed forest view">
+                <figcaption>Paper-mÃ¢chÃ© textureâ€”handmade, folkloric</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/BWgal1.jpg" alt="Production gallery image 1">
+                <figcaption>Production renderâ€”atmospheric haze through trees</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/BWgal2.jpg" alt="Production gallery image 2">
+                <figcaption>The stream detailâ€”roses floating downstream</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/bw10.jpg" alt="Cross-platform render comparison">
+                <figcaption>Cross-platform iterationâ€”refining the vision</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/BWherogrok.png" alt="Grok AI render">
+                <figcaption>Grok interpretationâ€”different AI, same vision</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Poster Section -->
+    <section class="poster-section">
+        <div class="poster-content">
+            <div class="poster-commentary">
+                <h2>Production Posters</h2>
+                <p>Marketing materials for a production that exists only in conversation. The challenge: capture the play's inevitability, its mixture of passion and death, without resorting to the obvious imagery of knives and blood.</p>
+
+                <div class="character-detail">
+                    <strong>The Forest Approach</strong>
+                    <p>Early iterations produced generic "Blood Wedding" imageryâ€”brides, knives, red splashes. The breakthrough came from focusing on the forest itself, the suspended horse, the sense of fate waiting in the darkness. Let the title do the work of promising blood; let the image promise the woods where it will be spilled.</p>
+                </div>
+
+                <div class="character-detail">
+                    <strong>Bilingual Editions</strong>
+                    <p>Both English and Spanish versionsâ€”"Blood Wedding" and "Bodas de Sangre." The Spanish carries Lorca's original music, the way the words move. The English version for audiences who need it, but the imagery speaks both languages.</p>
+                </div>
+            </div>
+            <div class="poster-grid">
+                <figure class="poster-item" style="grid-column: span 2;">
+                    <img src="assets/bwPosters.png" alt="Multiple poster variations showing design exploration" style="width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-deep);">
+                </figure>
+                <figure class="poster-item">
+                    <img src="assets/bwposter.png" alt="Final production poster - English version">
+                </figure>
+                <figure class="poster-item">
+                    <img src="assets/bwposter1.png" alt="Final production poster - Spanish version">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Documentation Section -->
+    <section class="design-concept" style="border-top: 1px solid var(--charcoal-600);">
+        <div class="concept-header">
+            <h2>Process Documentation</h2>
+            <p>The AI-assisted journey from initial vision to complete production package. These images document the conversation between imagination and machineâ€”the prompts, the iterations, the discoveries along the way.</p>
+        </div>
+
+        <div class="concept-grid">
+            <div class="concept-block">
+                <h3>Design Brief Development</h3>
+                <img src="assets/bwdesignbreif.png" alt="Design brief documentation" style="width: 100%; border-radius: var(--radius-md); margin-top: 16px;">
+                <p style="margin-top: 16px; font-size: 0.9rem; color: var(--stone-grey);">The model accumulating context about materials, staging, and visual language through conversation.</p>
+            </div>
+
+            <div class="concept-block">
+                <h3>Technical Elevations</h3>
+                <img src="assets/bwElevation.png" alt="Technical blueprint with elevations" style="width: 100%; border-radius: var(--radius-md); margin-top: 16px;">
+                <p style="margin-top: 16px; font-size: 0.9rem; color: var(--stone-grey);">Ground plan and elevations with materials specificationsâ€”starting point for the props department.</p>
+            </div>
+
+            <div class="concept-block">
+                <h3>Design Composition</h3>
+                <img src="assets/bwdesigncomp.png" alt="Design composition documentation" style="width: 100%; border-radius: var(--radius-md); margin-top: 16px;">
+                <p style="margin-top: 16px; font-size: 0.9rem; color: var(--stone-grey);">Generating Act II set design plansâ€”the conversation shifting from imagery to documentation.</p>
+            </div>
+
+            <div class="concept-block">
+                <h3>Visual Consistency</h3>
+                <img src="assets/bwTempcon.png" alt="Temporal consistency across acts" style="width: 100%; border-radius: var(--radius-md); margin-top: 16px;">
+                <p style="margin-top: 16px; font-size: 0.9rem; color: var(--stone-grey);">Maintaining visual consistency across actsâ€”same forest, evolving atmosphere.</p>
+            </div>
+
+            <div class="concept-block">
+                <h3>Costume Development</h3>
+                <img src="assets/bwcostumeset.png" alt="Costume set design" style="width: 100%; border-radius: var(--radius-md); margin-top: 16px;">
+                <p style="margin-top: 16px; font-size: 0.9rem; color: var(--stone-grey);">Full cast costume lineup matching the forest paletteâ€”blacks, off-whites, crimson accents.</p>
+            </div>
+
+            <div class="concept-block">
+                <h3>Program Materials</h3>
+                <img src="assets/bwprogram.png" alt="Program spread design" style="width: 100%; border-radius: var(--radius-md); margin-top: 16px;">
+                <p style="margin-top: 16px; font-size: 0.9rem; color: var(--stone-grey);">Act III scene with Lorca's text integratedâ€”production photography for a show that doesn't exist.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dramaturgy Section -->
+    <section class="dramaturgy-section">
+        <div class="concept-header">
+            <h2>Dramaturgical Notes</h2>
+        </div>
+
+        <div class="dramaturgy-content">
+            <div>
+                <h3>The Inevitability of Violence</h3>
+                <p>Lorca's tragedy operates on the logic of vendettaâ€”blood calling for blood across generations. The Mother has already lost her husband and one son to the same family's knives. When she learns her remaining son's bride was once betrothed to Leonardo, she knows how this ends. Everyone knows. The play doesn't build suspense about whether violence will occur, but about when, and how, and who will be left to mourn.</p>
+
+                <div class="quote-block">
+                    <p>"The knife, the knife... Cursed be all knives, and the scoundrel who invented them."</p>
+                    <cite>â€” The Mother, Act I</cite>
+                </div>
+
+                <p>The suspended horse embodies this inevitability. It never moves because it doesn't need toâ€”it's already arrived at its destination. From the first moment, Death is present, waiting. The audience sits in the forest where the final act will occur, surrounded by the instruments of fate.</p>
+            </div>
+
+            <div>
+                <h3>Lorca's Spain</h3>
+                <p>Lorca wrote Blood Wedding in 1932, based on a newspaper account of a real incident in AlmerÃ­a. Four years later, he would be murdered by Nationalist forces at the start of the Spanish Civil War. His body was never foundâ€”swallowed by the earth, by history, by the same kind of vendetta violence he'd written about.</p>
+
+                <h3>The Forest as Character</h3>
+                <p>In Act III, the forest becomes a speaking character. The Moon appears as a young woodcutter with a white face, demanding blood. Death appears as an old beggar woman. The woods themselves seem to breathe, to close in, to participate in the killing. This design takes that literallyâ€”the forest isn't a location but a presence, surrounding the action from the beginning, patient as fate.</p>
+
+                <h3>The Horse Leonardo Cannot Stop Riding</h3>
+                <p>Leonardo's obsessive night rides to the Bride's house are described but never shown. The horse arrives lathered, exhausted, driven beyond endurance. In this design, the suspended stallion becomes the physical manifestation of that obsessionâ€”frozen mid-gallop, eyes burning, eternally arriving at its forbidden destination.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Section -->
+    <section class="technical-section">
+        <div class="page-wrapper">
+            <h2>Technical Specifications</h2>
+            <p>Materials and staging notes for the production team.</p>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>Stage Configuration</h4>
+                    <ul class="tech-list">
+                        <li>Theatre-in-the-round, minimum 12m diameter</li>
+                        <li>Audience seated among forest elements</li>
+                        <li>Central playing area approximately 6m diameter</li>
+                        <li>Elevated rigging points for suspended horse</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>Forest Construction</h4>
+                    <ul class="tech-list">
+                        <li>Paper-mÃ¢chÃ© over armature wire frames</li>
+                        <li>Modular tree units for transport/setup</li>
+                        <li>Flame-retardant treatment required</li>
+                        <li>Black and charcoal grey palette</li>
+                        <li>Textured bark effect, gnarled branches</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>Suspended Horse</h4>
+                    <ul class="tech-list">
+                        <li>Lightweight foam core with paper-mÃ¢chÃ© skin</li>
+                        <li>Internal steel armature for rigging points</li>
+                        <li>LED eyes (red, dimmable)</li>
+                        <li>Static suspension from dead tree branch</li>
+                        <li>Safety inspection required for overhead rigging</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>The Stream</h4>
+                    <ul class="tech-list">
+                        <li>Recirculating water channel (black liner)</li>
+                        <li>Submersible LED strips (colour-changing)</li>
+                        <li>Silk rose stalks and petals (floating props)</li>
+                        <li>Pump system for continuous flow</li>
+                        <li>Waterproofing for adjacent stage areas</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>Lighting</h4>
+                    <ul class="tech-list">
+                        <li>Act I: Warm amber, practical oil lamps</li>
+                        <li>Act II: Harsh white wedding light</li>
+                        <li>Act III: Cold blue moonlight wash</li>
+                        <li>Stream underlighting (red for finale)</li>
+                        <li>Haze throughout for atmosphere</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>Costume Materials</h4>
+                    <ul class="tech-list">
+                        <li>Natural fabrics: muslin, linen, wool</li>
+                        <li>Colour palette: black, off-white, deep crimson</li>
+                        <li>Distressed/aged treatments</li>
+                        <li>Barefoot option for select characters</li>
+                        <li>Black rose appliquÃ© for Bride's gown</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p class="footer-title">Stages of Imagenation</p>
+        <p class="footer-note">A reconstructed portfolio of theatrical stage designs, transformed from remembered fragments into digital reality through AI image generation. The sketchbooks are gone, but the visions persist.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

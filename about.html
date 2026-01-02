@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Stages of Imagenation</title>
+    <meta name="description" content="The story behind Stages of Imagenationâ€”a lost portfolio of theatrical stage designs reconstructed through memory and AI image generation.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 6rem 2rem;
+        }
+
+        .about-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at 30% 40%, rgba(139, 0, 0, 0.12) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 60%, rgba(107, 107, 107, 0.08) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .about-hero h1 {
+            font-family: var(--font-subhead);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            color: var(--ghost-white);
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-hero .tagline {
+            font-family: var(--font-body);
+            font-size: 1.2rem;
+            color: var(--antique-gold);
+            font-style: italic;
+            max-width: 600px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Story Sections */
+        .story-section {
+            padding: 5rem 0;
+            border-bottom: 1px solid rgba(139, 0, 0, 0.15);
+        }
+
+        .story-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .story-content {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .story-content h2 {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            color: var(--theatre-red);
+            margin-bottom: 2rem;
+            text-transform: none;
+            letter-spacing: 0;
+            font-weight: 600;
+        }
+
+        .story-content p {
+            font-size: 1.15rem;
+            line-height: 1.85;
+            color: var(--dust-grey);
+            margin-bottom: 1.75rem;
+            text-align: justify;
+        }
+
+        .story-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .story-content .highlight {
+            color: var(--ink-white);
+            font-style: italic;
+        }
+
+        .story-content .accent {
+            color: var(--antique-gold);
+        }
+
+        /* Quote Block */
+        .origin-quote {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.08) 0%, transparent 100%);
+            border-left: 3px solid var(--theatre-red);
+            padding: 2rem 2.5rem;
+            margin: 3rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .origin-quote p {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--ghost-white);
+            line-height: 1.6;
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        /* Process Section with Visual */
+        .process-section {
+            padding: 5rem 0;
+            background: linear-gradient(to bottom, var(--charcoal-800), var(--charcoal-900));
+            border-top: 1px solid rgba(139, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(139, 0, 0, 0.2);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .process-text h2 {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            color: var(--theatre-red);
+            margin-bottom: 1.5rem;
+            text-transform: none;
+            letter-spacing: 0;
+            font-weight: 600;
+        }
+
+        .process-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dust-grey);
+            margin-bottom: 1.5rem;
+        }
+
+        .process-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .process-image figcaption {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--stone-grey);
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Continuing Section */
+        .continuing-section {
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .continuing-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .continuing-content h2 {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            color: var(--theatre-red);
+            margin-bottom: 2rem;
+            text-transform: none;
+            letter-spacing: 0;
+            font-weight: 600;
+        }
+
+        .continuing-content p {
+            font-size: 1.15rem;
+            line-height: 1.85;
+            color: var(--dust-grey);
+            margin-bottom: 1.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: var(--antique-gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--ink-white);
+        }
+
+        .dedication-line {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--antique-gold);
+            margin-bottom: 2rem;
+        }
+
+        /* Navigation */
+        .site-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 2rem;
+            z-index: 100;
+            background: linear-gradient(to bottom, rgba(5, 5, 5, 0.9) 0%, transparent 100%);
+        }
+
+        .site-nav a {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--dust-grey);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .site-nav a:hover {
+            color: var(--antique-gold);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .process-image {
+                order: -1;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                min-height: 50vh;
+                padding: 5rem 1.5rem;
+            }
+
+            .story-section {
+                padding: 3.5rem 0;
+            }
+
+            .story-content p,
+            .process-text p,
+            .continuing-content p {
+                font-size: 1.05rem;
+                text-align: left;
+            }
+
+            .origin-quote {
+                padding: 1.5rem 1.75rem;
+                margin: 2rem 0;
+            }
+
+            .origin-quote p {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="container">
+            <a href="index.html">&larr; Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="about-hero">
+        <h1>About This Project</h1>
+        <p class="tagline">Where lost sketchbooks meet machine imagination</p>
+    </header>
+
+    <!-- The Loss -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <h2>What Was Lost</h2>
+                <p>Three A3 sketchbooks. Charcoal on cartridge paper. Decades ago, they existedâ€”rough, impressionistic stage designs for plays that had taken up residence in the imagination and refused to leave. Tennessee Williams. Federico GarcÃ­a Lorca. Henrik Ibsen. Bertolt Brecht. Samuel Beckett. Designs for impossible productions, drawn in the fevered hours of early adulthood when the boundary between vision and reality felt negotiable.</p>
+                <p>Those sketchbooks were once submitted as a portfolioâ€”evidence of a particular way of seeing that earned entry to formal theatre training. Then they disappeared, as things do. Moved too many times. Packed in boxes that never arrived. <span class="highlight">The paper is gone. The drawings are gone.</span></p>
+                <p>But the visions never left.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Remained -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <h2>What Remained</h2>
+                <p>Memory is not faithful, but it is persistent. Fragments survived: the silhouette of a horse suspended in a paper forest. Glass animals watching from wire enclosures. A greenhouse built from thorned rose stems, its glass fogging with decades of unlived breath. These images would surface unbiddenâ€”in half-sleep, in the dark of theatres, in the moment before the house lights dimmed.</p>
+                <p>Thirty years of carrying other people's stories across stages, and these designs remained stubbornly present. Not quite complete, not quite forgotten. <span class="highlight">Waiting for a form of resurrection that hadn't been invented yet.</span></p>
+
+                <div class="origin-quote">
+                    <p>"The forest as fate. The glass unicorn as monument. The greenhouse as prison. These weren't illustrations of textsâ€”they were attempts to make psychological landscapes physically inhabitable."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Process -->
+    <section class="process-section">
+        <div class="container">
+            <div class="process-grid">
+                <div class="process-text">
+                    <h2>The Reconstruction</h2>
+                    <p>AI image generation became the means of excavation. Not to reproduce what was lostâ€”that's impossibleâ€”but to reconstruct it through conversation. A process of describing remembered fragments to a machine that has never seen a stage, never felt the particular vertigo of theatre's doubled reality.</p>
+                    <p>The first reconstruction was <a href="3-ai-post-Image-gen-BW-creative-project.html" style="color: var(--antique-gold);">Blood Wedding</a>. Lorca's tragedy of vendetta and fate, reimagined as a theatre-in-the-round production set within a dark paper-mÃ¢chÃ© forest. A suspended black stallion with glowing red eyes. A stream of black water carrying rose petals downstream toward inevitable violence.</p>
+                    <p>It began with a fragment: <span class="accent">"There was a horse. Frozen mid-gallop. Above everything."</span> From that single image, the entire design re-emergedâ€”not exactly as it had been, but as it might have been, filtered through three decades of accumulated understanding.</p>
+                </div>
+                <figure class="process-image">
+                    <img src="assets/bwdesignbreif.png" alt="Design brief development showing the conversation between memory and machine">
+                    <figcaption>The dialogue between memory and machineâ€”reconstructing Blood Wedding</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Method -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <h2>The Method</h2>
+                <p>Each design follows the same process. Begin with the textâ€”not the plot, but the emotional architecture. What is the play really about? What does it feel like to inhabit its world? Then search for the fragments: what images survived the decades? What kept returning despite every attempt at forgetting?</p>
+                <p>The memories, it turns out, are remarkably vivid. The suspended horse. The wire enclosures. The thorned architecture of the greenhouse. These visions have remained sharp across thirty yearsâ€”not faded impressions but persistent images, carried intact through every relocation and reinvention. <span class="highlight">The difficulty was never remembering. The difficulty was translation.</span></p>
+                <p>Describing a vision of imagination in words is an excruciating art. The gap between what the mind sees and what language can convey proves almost unbridgeable. And then there is the machine itselfâ€”trained on thousands of examples, gravitating always toward the familiar, the average, the composite of everything it has learned. Each prompt becomes a negotiation: pushing against the desire of training data to reproduce what it knows, coaxing it instead toward something it has never quite seen before.</p>
+                <p>The results are not reproductions. They are <span class="highlight">new objects made from old ghosts</span>. Theatrical designs for productions that will never be mounted, stages that exist only in the space between memory and machine learning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Discourse -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <h2>On Stolen Things and Excavated Ones</h2>
+                <p>The discourse around AI image generation circles endlessly around theft. Stolen styles. Scraped artworks. The labour of human creators fed into machines that regurgitate approximations without consent or compensation. These concerns are legitimate, and this project offers no resolution to them.</p>
+                <p>But something unexpected emerged in the process. Where the common narrative positions AI as a tool of extractionâ€”taking from artists without permissionâ€”this project inverted the relationship. Nothing was being stolen. Something was being <span class="highlight">excavated</span>. The machine became an instrument for recovering what was already mine, lost to time and circumstance, carried only in the unreliable architecture of memory.</p>
+                <p>The experience taught uncomfortable lessons about the nature of creative collaboration with technology. The machine resists the singular. It wants to give you what it has seen a thousand times beforeâ€”the composite, the average, the statistically probable. To produce something genuinely personal requires iteration upon iteration, an ongoing battle to overcome the gravitational pull of training data. The prompts that finally worked were not descriptions of images but negotiations with a system that preferred to give me something else.</p>
+                <p>Where this leaves the broader questions of appropriation and originality, of style and ownership, remains uncertain. But this much became clear: <span class="highlight">for those willing to wrestle with it, the technology can serve rather than supplant.</span> The choice is whether to accept what the machine offers by default, or to master it sufficiently to extract what was always yours to begin with.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedication -->
+    <section class="continuing-section">
+        <div class="container">
+            <div class="continuing-content">
+                <h2>A Dedication</h2>
+                <p class="dedication-line"><em>To the artists, creatives, and other unreliable narrators with wild imaginations.</em></p>
+                <p>This project exists for those who desire mastery over technology rather than effortless acceptance of its defaults, its flaws. Those who aspire to control rather than be enslaved by its thrifting, averaging nature and interminable appetite for reproducing normal.</p>
+                <a href="index.html" class="back-link">&larr; View the Reconstructed Works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-title">Stages of Imagenation</p>
+            <p class="footer-note">A reconstructed portfolio of theatrical stage designs, transformed from remembered fragments into digital reality through AI image generation. The sketchbooks are gone, but the visions persist.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

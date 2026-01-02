@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Glass Menagerie | Stage Design Concept</title>
+    <meta name="description" content="A reconstructed stage design for Tennessee Williams' The Glass Menagerie. A memory play staged in a ruined church where glass animals watch from wire enclosures and blue rose shadows fall on grey concrete.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --charcoal-900: #0d0d0d;
+            --charcoal-800: #1a1a1a;
+            --charcoal-700: #262626;
+            --charcoal-600: #333333;
+            --stone-grey: #6b6b6b;
+            --ash-grey: #9a9a9a;
+            --dust-grey: #c4c4c4;
+            --ink-white: #f5f5f5;
+            --glass-blue: #3a6ea5;
+            --glass-bright: #5a8ec5;
+            --glass-deep: #1a3a5a;
+            --amber-warm: #d4a574;
+            --glass-glow: rgba(58, 110, 165, 0.15);
+            --shadow-deep: 0 25px 60px rgba(0,0,0,.5);
+            --shadow-soft: 0 10px 30px rgba(0,0,0,.3);
+            --radius-lg: 12px;
+            --radius-md: 8px;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Source Sans Pro', 'Segoe UI', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--dust-grey);
+            background: var(--charcoal-900);
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--ink-white);
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--glass-blue);
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+        }
+
+        /* Layout */
+        .page-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 30% 20%, var(--glass-glow) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 80%, rgba(107, 107, 107, 0.1) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .production-tag {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--glass-blue);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--glass-deep);
+        }
+
+        .hero-title {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1.4rem;
+            color: var(--ash-grey);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-translation {
+            font-size: 1rem;
+            color: var(--stone-grey);
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 700px;
+            color: var(--dust-grey);
+        }
+
+        /* Featured Image */
+        .featured-image {
+            margin: 60px 0;
+            position: relative;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-deep);
+        }
+
+        .featured-image figcaption {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--stone-grey);
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Design Concept Section */
+        .design-concept {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .concept-header {
+            max-width: 800px;
+            margin-bottom: 60px;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .concept-block {
+            background: linear-gradient(180deg, var(--charcoal-800) 0%, var(--charcoal-900) 100%);
+            border: 1px solid var(--charcoal-600);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .concept-block:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .concept-block.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .concept-block h3 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .concept-block h3::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: var(--glass-blue);
+            border-radius: 2px;
+        }
+
+        /* Elements Section */
+        .elements-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .elements-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .element-visual {
+            position: sticky;
+            top: 40px;
+        }
+
+        .element-visual img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-deep);
+        }
+
+        .element-visual figcaption {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--stone-grey);
+            font-style: italic;
+            text-align: center;
+        }
+
+        .element-description h2 {
+            margin-bottom: 2rem;
+        }
+
+        .element-detail {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--charcoal-600);
+        }
+
+        .element-detail strong {
+            color: var(--ink-white);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .gallery-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            aspect-ratio: 4/5;
+            background: var(--charcoal-800);
+            border: 1px solid var(--charcoal-600);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item.wide {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+            aspect-ratio: auto;
+        }
+
+        .gallery-item figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: var(--dust-grey);
+            font-size: 0.85rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover figcaption {
+            transform: translateY(0);
+        }
+
+        /* Poster Section */
+        .poster-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .poster-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .poster-commentary {
+            position: sticky;
+            top: 40px;
+        }
+
+        .poster-commentary h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .poster-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .poster-item {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s ease;
+        }
+
+        .poster-item:hover {
+            transform: translateY(-8px);
+        }
+
+        .poster-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Dramaturgy Section */
+        .dramaturgy-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+        }
+
+        .dramaturgy-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .quote-block {
+            background: var(--glass-glow);
+            border-left: 4px solid var(--glass-blue);
+            padding: 24px 28px;
+            margin: 2rem 0;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+
+        .quote-block p {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--ink-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .quote-block cite {
+            font-size: 0.9rem;
+            color: var(--glass-blue);
+            font-style: normal;
+        }
+
+        /* Technical Section */
+        .technical-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--charcoal-600);
+            background: linear-gradient(180deg, var(--charcoal-900) 0%, var(--charcoal-800) 100%);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .tech-card {
+            background: var(--charcoal-900);
+            border: 1px solid var(--charcoal-600);
+            border-radius: var(--radius-md);
+            padding: 24px;
+        }
+
+        .tech-card h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--glass-blue);
+        }
+
+        .tech-list {
+            list-style: none;
+        }
+
+        .tech-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--charcoal-700);
+            font-size: 0.95rem;
+            color: var(--ash-grey);
+        }
+
+        .tech-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: 60px 0 40px;
+            border-top: 1px solid var(--charcoal-600);
+            text-align: center;
+        }
+
+        .footer-title {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--ink-white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-note {
+            font-size: 0.9rem;
+            color: var(--stone-grey);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .concept-grid,
+            .elements-grid,
+            .dramaturgy-content,
+            .poster-content {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .element-visual,
+            .poster-commentary {
+                position: relative;
+                top: 0;
+            }
+
+            .poster-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.wide {
+                grid-column: span 1;
+            }
+
+            .gallery-item.tall {
+                grid-row: span 1;
+                aspect-ratio: 4/5;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .poster-grid {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="production-tag">Reconstructed Design Portfolio</span>
+            <h1 class="hero-title">The Glass Menagerie</h1>
+            <p class="hero-subtitle">Tennessee Williams, 1944</p>
+            <p class="hero-translation">A Memory Play in Seven Scenes</p>
+            <div class="hero-description">
+                <p>A ruined church transformed into a memory-space where sacred architecture, institutional confinement, and domestic fragments collapse into a single image. Grey cobblestone walls rise to arched stained glass windows depicting blue rosesâ€”the impossible flowers that became Laura's nickname. Light streams through, casting blue rose shadows across a concrete floor.</p>
+                <p>Wire mesh fencing lines the wings, containing life-size glass animals that watch the action below. At centre stage, a transparent glass rocking horseâ€”childhood frozen in fragile material, too precious to touch, too beautiful to survive.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Image -->
+    <figure class="featured-image">
+        <img src="assets/GMset2.png" alt="The Glass Menagerie - Full stage render showing ruined church architecture with blue rose stained glass and wire mesh enclosures containing glass animals">
+        <figcaption>The memory-space revealed: grey cobblestone walls, blue rose stained glass, wire mesh zoo enclosures, and the glass rocking horse at centre.</figcaption>
+    </figure>
+
+    <!-- Design Concept Section -->
+    <section class="design-concept">
+        <div class="concept-header">
+            <h2>Design Concept</h2>
+            <p>This design inverts the domestic realism Williams' text suggests to create something far more psychologically true. The Wingfield apartment dissolves into a memory-space where sacred architecture, institutional confinement, and domestic fragments collapse into a single image. The family does not keep the glass animalsâ€”they are enclosed by them.</p>
+        </div>
+
+        <div class="concept-grid">
+            <div class="concept-block">
+                <h3>The Space</h3>
+                <p>A row of arched stained glass windows depicting blue roses, set into grey cobblestone masonry suggesting a deconsecrated church or abandoned institutional building. Several panels are boarded over with rough wooden planksâ€”beautiful things partially obscured, light partially blocked.</p>
+                <p>The boarding is haphazard, desperate, as if someone tried to keep something out. Or in. The ruined church aesthetic makes this a sacred space that has been abandoned. Memory as desecrated cathedral.</p>
+            </div>
+
+            <div class="concept-block">
+                <h3>The Wire Enclosures</h3>
+                <p>Industrial wire mesh fencing rises to enclosure heightâ€”the kind you'd see at a zoo or detention facility. Behind this fencing, visible but unreachable, stand life-size glass animals. Translucent sculptural presences catching light, watching.</p>
+                <p>They are not being protected. They are doing the watching. The family moves freely in the central space; the animals observe from their cages. But who is truly imprisoned?</p>
+            </div>
+
+            <div class="concept-block">
+                <h3>Lighting Concept</h3>
+                <p>Blue light streaming through stained glass windows, casting blue rose shadow patterns across the grey concrete floor. These shadows should feel devotionalâ€”light through cathedral windows falling on stone.</p>
+                <p>Oil lamps provide warm amber pools where scenes play out. These islands of warmth exist within the cold blue void. Characters move between warmth and cold, between presence and memory.</p>
+            </div>
+
+            <div class="concept-block">
+                <h3>The Exit</h3>
+                <p>Where Williams calls for a fire escapeâ€”Tom's liminal space between entrapment and freedomâ€”this design substitutes a blue neon "EMERGENCY EXIT" sign with an arrow pointing toward the rear wall, toward the stained glass, toward the past.</p>
+                <p>The sign is banal, institutional. But rendered in blue neon, it ties chromatically to the rose windows. And the arrow points not outward but inward, deeper into memory. The way out leads back.</p>
+            </div>
+
+            <div class="concept-block full-width">
+                <h3>Atmospheric Notes</h3>
+                <p>Cold, sacred, ruined. The space breathes abandonment and impossible beauty. The blue rose shadows should feel simultaneously romantic and funerealâ€”the kind of light that falls in empty churches, in dreams of places you can never return to.</p>
+                <p>The audience should feel the grey should feel endless, exhausting, inescapableâ€”and then the blue light shocks. Not hope exactly, but something devotional. Evidence of worship that has already failed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glass Unicorn Section -->
+    <section class="elements-section">
+        <div class="elements-grid">
+            <div class="element-visual">
+                <figure>
+                    <img src="assets/GMhorse1.png" alt="The glass rocking horse at centre stage, catching blue light from the stained glass windows">
+                    <figcaption>The glass rocking horseâ€”childhood frozen in fragile material, too precious to touch</figcaption>
+                </figure>
+            </div>
+            <div class="element-description">
+                <h2>The Glass Unicorn (Reimagined)</h2>
+                <p>Just off-centre stage sits a life-size glass rocking horse. This replaces Williams' tiny unicorn figurineâ€”the "freakishly" different piece Laura loves mostâ€”with something simultaneously childlike and impossible.</p>
+
+                <div class="element-detail">
+                    <strong>Contradiction Made Material</strong>
+                    <p>A glass rocking horse is a contradiction made material: childhood toys are meant to be used, ridden, battered by small hands. Glass shatters. This object freezes nostalgia, beautiful paralysis rendered in crystalline form.</p>
+                </div>
+
+                <div class="element-detail">
+                    <strong>What the Wingfields Worship</strong>
+                    <p>It represents everything the Wingfields worship: a childhood that cannot be touched, a past that breaks if you try to return to it. Placed just off-centre, it occupies the space almost-but-not-quite at the focal point. The eye keeps returning to it but can never rest there comfortably.</p>
+                </div>
+
+                <div class="element-detail">
+                    <strong>The Breaking</strong>
+                    <p>When Jim breaks the unicorn's horn in the text, he breaks thisâ€”the impossible beautiful thing at the centre of Laura's world. In this design, the metaphor becomes monumental. The breaking of something this size would be catastrophic, irreversible, echoing through the ruined church like the collapse of everything fragile.</p>
+                </div>
+
+                <div class="element-detail">
+                    <strong>The Scale</strong>
+                    <p>The scale says: your waiting is not unique. Your fragility is not special. This is what worship costs. This is what memory weighs. The glass horse stands as monument to everything that breaks when you try to hold onto it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="gallery-header">
+            <h2>Design Gallery</h2>
+            <p>Stage renders, scenic elements, and lighting studies for a memory that exists only in conversation and image generation.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <figure class="gallery-item wide">
+                <img src="assets/GMset1.png" alt="Alternative stage angle showing full architecture">
+                <figcaption>The memory-space from a different angleâ€”wire enclosures, stained glass, grey concrete</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/GlassM.png" alt="Stage design front elevation">
+                <figcaption>Front elevationâ€”arched windows with blue roses, glass animals in wire enclosures</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/GlassM2.png" alt="Close-up of the glass horse prop">
+                <figcaption>The glass horse detailâ€”translucent, fragile, catching blue light</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/GlassM3.png" alt="Lighting elevation showing blue rose shadows">
+                <figcaption>Lighting elevationâ€”blue rose shadows across grey concrete</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/GMlight1.png" alt="Atmospheric lighting study">
+                <figcaption>Atmospheric studyâ€”blue devotional light meeting amber warmth</figcaption>
+            </figure>
+            <figure class="gallery-item wide">
+                <img src="assets/GMuni1.png" alt="The glass unicorn in context">
+                <figcaption>The unicorn in contextâ€”the most precious thing, just off-centre</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/GMgal1.png" alt="Production gallery image 1">
+                <figcaption>Production renderâ€”the abandoned cathedral atmosphere</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/GMgal2.png" alt="Production gallery image 2">
+                <figcaption>Detailâ€”wire mesh and glass, confinement and beauty</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Poster Section -->
+    <section class="poster-section">
+        <div class="poster-content">
+            <div class="poster-commentary">
+                <h2>Production Posters</h2>
+                <p>Marketing materials for a production that exists only in memory. The challenge: capture the play's central paradoxâ€”the beauty of fragile things, the cruelty of holding onto them too tightly.</p>
+
+                <div class="element-detail">
+                    <strong>The Blue Rose Motif</strong>
+                    <p>Laura's nickname comes from a misheard word: "pleurosis" becomes "Blue Roses." The condition becomes identity. The impossible flowerâ€”blue roses don't exist in natureâ€”becomes the visual signature. Beautiful, impossible, wrong.</p>
+                </div>
+
+                <div class="element-detail">
+                    <strong>The Typography</strong>
+                    <p>Clean, theatrical, allowing the imagery to breathe. The title carries weight; let the blue light and glass do the work of promising fragility. The audience should feel they're looking at something precious before they even enter the space.</p>
+                </div>
+
+                <div class="element-detail">
+                    <strong>Memory as Medium</strong>
+                    <p>Williams wrote that the play is "memory and is therefore seated predominantly in the heart." The posters suggest not a documentary record but a dreamâ€”the way Tom Wingfield sees his past when he closes his eyes in strange cities, trying to forget.</p>
+                </div>
+            </div>
+            <div class="poster-grid">
+                <figure class="poster-item">
+                    <img src="assets/GMposter1.png" alt="Production poster featuring blue rose stained glass">
+                </figure>
+                <figure class="poster-item">
+                    <img src="assets/GMposter2.png" alt="Alternative poster design with glass horse focus">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dramaturgy Section -->
+    <section class="dramaturgy-section">
+        <div class="concept-header">
+            <h2>Dramaturgical Notes</h2>
+        </div>
+
+        <div class="dramaturgy-content">
+            <div>
+                <h3>Memory as Architecture</h3>
+                <p>Williams specified that the play should feel like memoryâ€”"seated predominantly in the heart"â€”with gauze scrims, projected images, and lighting that isolates moments like photographs fading at the edges. Not realism. Impression. The past seen through glass, darkly.</p>
+
+                <div class="quote-block">
+                    <p>"I give you truth in the pleasant disguise of illusion."</p>
+                    <cite>â€” Tom Wingfield, Opening Monologue</cite>
+                </div>
+
+                <p>This design removes the pleasant disguise. The illusion remains. The truth is colder. The Wingfields don't live in an apartmentâ€”they exist in the architecture of memory itself, a ruined church where worship has already failed.</p>
+
+                <h3>The Zoo Cages</h3>
+                <p>The wire mesh enclosures invert the relationship between keeper and kept. Laura's glass animals have grown monumental and now contain the family. What was once her private escape has become everyone's prison. The delicate things she collected now collect her.</p>
+            </div>
+
+            <div>
+                <h3>The Guilt of Escape</h3>
+                <p>Tom's exit sign points backward, into the stained glass, into memory. Even leaving, he goes deeper in. The play's final imageâ€”Laura blowing out candles, plunging the stage into darknessâ€”finds its scenic equivalent in the extinguishing of amber warmth, leaving only blue light and the watching glass.</p>
+
+                <div class="quote-block">
+                    <p>"I didn't go to the moon, I went much furtherâ€”for time is the longest distance between two places."</p>
+                    <cite>â€” Tom Wingfield, Closing Monologue</cite>
+                </div>
+
+                <h3>Williams in 1944</h3>
+                <p>Williams wrote The Glass Menagerie while working in a St. Louis shoe factory, the same job his father forced on his sister Rose. Rose, like Laura, was painfully shy and fragile. In 1943, she was lobotomized. Williams never forgave himself for not preventing it. Every production of this play is, in some sense, an act of expiationâ€”the brother who got away, trying to reach back through glass and time.</p>
+
+                <h3>Blue Roses Don't Exist</h3>
+                <p>That's the point. Laura is something that shouldn't existâ€”too delicate for the world, too beautiful for survival. The stained glass windows show impossible flowers because the play is about impossible things: impossible love, impossible escape, impossible forgiveness.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Section -->
+    <section class="technical-section">
+        <div class="page-wrapper">
+            <h2>Technical Specifications</h2>
+            <p>Materials and staging notes for the production team.</p>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>Stage Configuration</h4>
+                    <ul class="tech-list">
+                        <li>Thrust or proscenium with strong frontal composition</li>
+                        <li>Grey cobblestone masonry walls (flats or sculpted foam)</li>
+                        <li>Arched window openings for stained glass panels</li>
+                        <li>Concrete floor treatment or painted surface</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>Stained Glass Windows</h4>
+                    <ul class="tech-list">
+                        <li>Translucent acrylic or theatrical gel panels</li>
+                        <li>Blue rose motif design</li>
+                        <li>Backlit from flies or cyc</li>
+                        <li>Some panels boarded with practical timber</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>Wire Enclosures</h4>
+                    <ul class="tech-list">
+                        <li>Industrial wire mesh panels (powder-coated grey)</li>
+                        <li>Freestanding frames stage left and right</li>
+                        <li>Contained glass animal sculptures</li>
+                        <li>Subtle internal lighting</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>Glass Rocking Horse</h4>
+                    <ul class="tech-list">
+                        <li>Life-size (approx. 1.5m height)</li>
+                        <li>Clear acrylic or resin construction</li>
+                        <li>Internal LED lighting option</li>
+                        <li>Positioned just off-centre stage</li>
+                        <li>Breakaway version for finale (optional)</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>Lighting</h4>
+                    <ul class="tech-list">
+                        <li>Blue wash through stained glass (gobo breakup)</li>
+                        <li>Practical oil lamps (amber LED)</li>
+                        <li>Blue neon EXIT sign (practical)</li>
+                        <li>Glass animals subtly underlit throughout</li>
+                        <li>Final blackout leaving only blue wash</li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <h4>Set Dressing</h4>
+                    <ul class="tech-list">
+                        <li>Minimal furniture: Victorian couch, side tables</li>
+                        <li>Charcoal portrait on easel (the father)</li>
+                        <li>Period-appropriate domestic details</li>
+                        <li>Everything slightly shabby, salvaged quality</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p class="footer-title">Stages of Imagenation</p>
+        <p class="footer-note">A reconstructed portfolio of theatrical stage designs, transformed from remembered fragments into digital reality through AI image generation. The sketchbooks are gone, but the visions persist.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
