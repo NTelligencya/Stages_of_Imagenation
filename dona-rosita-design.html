@@ -596,9 +596,64 @@
                 max-width: 300px;
             }
         }
+
+        /* Site Navigation */
+        .site-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem 2rem;
+            z-index: 1000;
+            background: linear-gradient(to bottom, rgba(13, 13, 13, 0.95) 0%, rgba(13, 13, 13, 0.8) 70%, transparent 100%);
+        }
+        .site-nav .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .site-nav .nav-home {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--ink-white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .site-nav .nav-home:hover {
+            color: var(--dust-grey);
+        }
+        .site-nav .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .site-nav .nav-links a {
+            font-size: 0.85rem;
+            color: var(--ash-grey);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .site-nav .nav-links a:hover {
+            color: var(--ink-white);
+        }
     </style>
 </head>
 <body>
+
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-home">Stages of Imagenation</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Works</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
 
 <div class="page-wrapper">
 
@@ -608,9 +663,9 @@
             <span class="production-tag">Reconstructed Design Portfolio</span>
             <h1 class="hero-title">Doña Rosita la soltera</h1>
             <p class="hero-subtitle">Federico García Lorca, 1935</p>
-            <p class="hero-translation">or The Language of Flowers "” A Granadine poem of the nineteenth century</p>
+            <p class="hero-translation">or The Language of Flowers — A Granadine poem of the nineteenth century</p>
             <div class="hero-description">
-                <p>A cottage built as a greenhouse. Black rose stems form the walls"”twisted, thorned canes creating an architecture that grows more imprisoning with each act. Glass panels fog with condensation that thickens over twenty years. Against a cyclorama that bleeds from arterial red to bone white to silty grey, a woman waits for a man who will never return.</p>
+                <p>A cottage built as a greenhouse. Black rose stems form the walls—twisted, thorned canes creating an architecture that grows more imprisoning with each act. Glass panels fog with condensation that thickens over twenty years. Against a cyclorama that bleeds from arterial red to bone white to silty grey, a woman waits for a man who will never return.</p>
                 <p>Dominating the stage: a monumental Spanish guitar, charcoal black as if salvaged from fire, its strings made of thorned rose vines. Music that wounds.</p>
             </div>
         </div>
@@ -619,26 +674,26 @@
     <!-- Featured Image -->
     <figure class="featured-image">
         <img src="assets/DRhero.png" alt="Doña Rosita la soltera - Full stage render showing greenhouse prison of black rose stems with monumental guitar against grey cyclorama">
-        <figcaption>Act III: The greenhouse skeleton exposed"”glass removed, only thorns remaining. The rosa mutabile has withered.</figcaption>
+        <figcaption>Act III: The greenhouse skeleton exposed—glass removed, only thorns remaining. The rosa mutabile has withered.</figcaption>
     </figure>
 
     <!-- Design Concept Section -->
     <section class="design-concept">
         <div class="concept-header">
             <h2>Design Concept</h2>
-            <p>The greenhouse as prison. Rosita doesn't tend the conservatory"”she is the flower trapped inside it, cultivated and displayed until she withers on the stem. The architecture of waiting made visible: glass walls fogging with the accumulated breath of unlived years, thorns pressing inward, a space that grows smaller as hope drains away.</p>
+            <p>The greenhouse as prison. Rosita doesn't tend the conservatory—she is the flower trapped inside it, cultivated and displayed until she withers on the stem. The architecture of waiting made visible: glass walls fogging with the accumulated breath of unlived years, thorns pressing inward, a space that grows smaller as hope drains away.</p>
         </div>
 
         <div class="concept-grid">
             <div class="concept-block">
                 <h3>The Space</h3>
                 <p>A cottage constructed from twisted black rose stem canes forming walls, doorframes, and a peaked roof. Glass panels (or theatrical scrim suggesting glass) fill the spaces between stems, fogged with condensation that thickens across each act.</p>
-                <p>By Act III, the interior is barely visible through the moisture"”Rosita seen as through tears. The glass is removed entirely for the final scenes, leaving only the skeleton of thorns as the family is evicted, the greenhouse dismantled to its bones.</p>
+                <p>By Act III, the interior is barely visible through the moisture—Rosita seen as through tears. The glass is removed entirely for the final scenes, leaving only the skeleton of thorns as the family is evicted, the greenhouse dismantled to its bones.</p>
             </div>
 
             <div class="concept-block">
                 <h3>The Monumental Instruments</h3>
-                <p>Stage left, a massive Spanish guitar leans against a gnarled tree trunk"”scaled to perhaps three times human height, charcoal black as if salvaged from fire, with ornate Spanish gold embossed detailing on its body. The strings are thick thorned rose vines, catching light like needles.</p>
+                <p>Stage left, a massive Spanish guitar leans against a gnarled tree trunk—scaled to perhaps three times human height, charcoal black as if salvaged from fire, with ornate Spanish gold embossed detailing on its body. The strings are thick thorned rose vines, catching light like needles.</p>
                 <p>No one plays the guitar. No one can.</p>
             </div>
 
@@ -650,15 +705,15 @@
 
             <div class="concept-block">
                 <h3>Lighting Concept</h3>
-                <p>Act I: Warm amber wash filtering through glass, the red cyclorama glowing. Romantic decay"”the condensation almost beautiful.</p>
+                <p>Act I: Warm amber wash filtering through glass, the red cyclorama glowing. Romantic decay—the condensation almost beautiful.</p>
                 <p>Act II: Cooler, flatter light. Practical oil lamps create isolated pockets of warmth within increasing coldness. The white cyclorama exposes rather than flatters.</p>
-                <p>Act III: Grey, diffused, directionless. Light struggles through thick condensation. Rosita lit from within as if she is the only source of warmth left"”and fading.</p>
+                <p>Act III: Grey, diffused, directionless. Light struggles through thick condensation. Rosita lit from within as if she is the only source of warmth left—and fading.</p>
             </div>
 
             <div class="concept-block full-width">
                 <h3>Atmospheric Notes</h3>
-                <p>The condensation should feel alive"”droplets forming, sliding down glass, pooling. A space that weeps. The thorns should catch light, glinting like needles or teeth. The audience should feel both the seduction of this enclosed garden and its slow violence"”the way beauty can trap you, the way patience becomes paralysis, the way a woman can be cultivated and displayed until she withers on the stem.</p>
-                <p>The guitar rests as a monument to forces too enormous to escape. A relic pulled from some catastrophe, still bearing scorch marks. Rosita's greenhouse sits dwarfed beneath these charred giants"”her whole life just a footnote to passion and time.</p>
+                <p>The condensation should feel alive—droplets forming, sliding down glass, pooling. A space that weeps. The thorns should catch light, glinting like needles or teeth. The audience should feel both the seduction of this enclosed garden and its slow violence—the way beauty can trap you, the way patience becomes paralysis, the way a woman can be cultivated and displayed until she withers on the stem.</p>
+                <p>The guitar rests as a monument to forces too enormous to escape. A relic pulled from some catastrophe, still bearing scorch marks. Rosita's greenhouse sits dwarfed beneath these charred giants—her whole life just a footnote to passion and time.</p>
             </div>
         </div>
     </section>
@@ -672,24 +727,24 @@
 
         <div class="acts-grid">
             <div class="act-card act-one">
-                <h3>Act I "” The Bloom</h3>
+                <h3>Act I — The Bloom</h3>
                 <p class="act-year">1890</p>
                 <p>Delicate thorned architecture, glass panels with light condensation. Warm amber light filters through, the deep red cyclorama glowing behind. The greenhouse still breathes.</p>
                 <p>Rosita enters in vivid red. Her cousin leaves for Tucumán, promising return. She promises to wait. The rosa mutabile blooms crimson at dawn.</p>
             </div>
 
             <div class="act-card act-two">
-                <h3>Act II "” The Bleaching</h3>
+                <h3>Act II — The Bleaching</h3>
                 <p class="act-year">1900</p>
-                <p>The rose stems have multiplied"”more thorned canes crossing and interweaving. Glass panels heavily fogged with thick condensation, droplets streaming down. The bone white cyclorama creates clinical exposure.</p>
+                <p>The rose stems have multiplied—more thorned canes crossing and interweaving. Glass panels heavily fogged with thick condensation, droplets streaming down. The bone white cyclorama creates clinical exposure.</p>
                 <p>Ten years. The letters still arrive. The trousseau grows. The world changes. Rosita does not. The rosa mutabile whitens at midday.</p>
             </div>
 
             <div class="act-card act-three">
-                <h3>Act III "” The Withering</h3>
+                <h3>Act III — The Withering</h3>
                 <p class="act-year">1910</p>
                 <p>The glass is gone. Only the skeleton of dense black thorns remains, a cage-like structure against silty grey. Condensation pooled on the floor. The space dismantled, exposed, the family being evicted.</p>
-                <p>He married another. Everyone knew. She waited anyway. Now they address her as "Doña""”the spinster. The rosa mutabile fades at nightfall, too withered to fall.</p>
+                <p>He married another. Everyone knew. She waited anyway. Now they address her as "Doña—”the spinster. The rosa mutabile fades at nightfall, too withered to fall.</p>
             </div>
         </div>
     </section>
@@ -705,17 +760,17 @@
             </div>
             <div class="element-description">
                 <h2>The Instruments of Waiting</h2>
-                <p>Two objects dominate the stage, dwarfing the human figures and the greenhouse itself. They are monuments to forces larger than any individual life"”passion and time, desire and decay.</p>
+                <p>Two objects dominate the stage, dwarfing the human figures and the greenhouse itself. They are monuments to forces larger than any individual life—passion and time, desire and decay.</p>
 
                 <div class="element-detail">
                     <strong>The Guitar</strong>
-                    <p>A monumental Spanish guitar, three times human height, leaning against a gnarled dead tree. Charcoal black as if salvaged from a fire, its surface showing the scorched patina of something that has already burned. Ornate Spanish gold embossing"”floral scrollwork, traditional patterns"”survives on the body like memory persisting through destruction.</p>
+                    <p>A monumental Spanish guitar, three times human height, leaning against a gnarled dead tree. Charcoal black as if salvaged from a fire, its surface showing the scorched patina of something that has already burned. Ornate Spanish gold embossing—floral scrollwork, traditional patterns—survives on the body like memory persisting through destruction.</p>
                     <p>The strings are thick thorned rose vines, stretched taut, catching light like needles. To play this instrument is to bleed. The music of Andalusian passion becomes an act of self-harm. No one touches it. It stands as warning, as accusation, as the culture that wounds women by demanding they wait, they hope, they perform devotion until their hands are shredded.</p>
                 </div>
 
                 <div class="element-detail">
                     <strong>The Scale</strong>
-                    <p>These objects are not props"”they are architecture. They dwarf the greenhouse, dwarf Rosita, dwarf the domestic drama playing out beneath them. The scale says: your waiting is not unique. Your passion is not special. These forces crush everyone. You are one more woman wasting her life to the tune of a guitar no one can play.</p>
+                    <p>These objects are not props—they are architecture. They dwarf the greenhouse, dwarf Rosita, dwarf the domestic drama playing out beneath them. The scale says: your waiting is not unique. Your passion is not special. These forces crush everyone. You are one more woman wasting her life to the tune of a guitar no one can play.</p>
                 </div>
             </div>
         </div>
@@ -761,22 +816,22 @@
         <div class="poster-content">
             <div class="poster-commentary">
                 <h2>Poster Concepts</h2>
-                <p>Four variants tracking the play's central metaphor: the rosa mutabile that blooms red at dawn and withers grey by nightfall. Each poster exists in two states"”the blood-warm palette of Act I and the drained monochrome of Act III.</p>
+                <p>Four variants tracking the play's central metaphor: the rosa mutabile that blooms red at dawn and withers grey by nightfall. Each poster exists in two states—the blood-warm palette of Act I and the drained monochrome of Act III.</p>
                 
                 <div class="element-detail">
                     <strong>The Greenhouse Silhouette</strong>
-                    <p>The first pair frames the thorned architecture against the shifting cyclorama. In the warm version, the greenhouse still suggests sanctuary"”amber light filtering through glass, the structure delicate despite its thorns. In the grey version, the same silhouette becomes skeletal, cage-like, the thorns no longer decorative but predatory. Same structure, different reading. Twenty years will do that.</p>
+                    <p>The first pair frames the thorned architecture against the shifting cyclorama. In the warm version, the greenhouse still suggests sanctuary—amber light filtering through glass, the structure delicate despite its thorns. In the grey version, the same silhouette becomes skeletal, cage-like, the thorns no longer decorative but predatory. Same structure, different reading. Twenty years will do that.</p>
                 </div>
 
                 <div class="element-detail">
                     <strong>The Hand and the Strings</strong>
-                    <p>The second pair offers the production's central image: a woman's hand reaching toward the thorned rose-vine strings of the guitar. The fingernail painted red"”the last trace of vitality, of vanity, of hope. In the warm version, the gesture reads as desire, the hand about to make music despite the cost. In the grey version, the same gesture becomes aftermath: the hand that reached, the strings that cut, the blood already dried to rust.</p>
+                    <p>The second pair offers the production's central image: a woman's hand reaching toward the thorned rose-vine strings of the guitar. The fingernail painted red—the last trace of vitality, of vanity, of hope. In the warm version, the gesture reads as desire, the hand about to make music despite the cost. In the grey version, the same gesture becomes aftermath: the hand that reached, the strings that cut, the blood already dried to rust.</p>
                     <p>She will play this instrument. She will bleed. The poster doesn't tell you if it was worth it.</p>
                 </div>
 
                 <div class="element-detail">
                     <strong>The Typography</strong>
-                    <p>Spanish title, traditional serif letterforms, the formal "Doña" that marks Rosita's transformation from hopeful girl to confirmed spinster. The placeholder credits"”"DirecciÃ³n / Nombre del Director""”wait to be filled, like the trousseau Rosita embroiders for a wedding that never comes.</p>
+                    <p>Spanish title, traditional serif letterforms, the formal "Doña" that marks Rosita's transformation from hopeful girl to confirmed spinster. The placeholder credits—"Dirección / Nombre del Director—”wait to be filled, like the trousseau Rosita embroiders for a wedding that never comes.</p>
                 </div>
             </div>
             <div class="poster-grid">
@@ -802,23 +857,23 @@
         <div class="dramaturgy-content">
             <div>
                 <h3>The Passage of Time</h3>
-                <p>Lorca said the theme of the play is the passage of time. Not dramatic events"”nothing much happens. A man leaves, a woman waits, years pass, he marries someone else, she keeps waiting. The horror is in the accumulation, the slow burial of a life under the weight of its own patience.</p>
-                <p>The greenhouse design makes time visible. The thorns multiply between acts like rings in a tree, recording each year of waiting. The condensation thickens"”tears, breath, the humidity of unlived desire fogging the glass until Rosita can barely see out, until we can barely see in.</p>
+                <p>Lorca said the theme of the play is the passage of time. Not dramatic events—nothing much happens. A man leaves, a woman waits, years pass, he marries someone else, she keeps waiting. The horror is in the accumulation, the slow burial of a life under the weight of its own patience.</p>
+                <p>The greenhouse design makes time visible. The thorns multiply between acts like rings in a tree, recording each year of waiting. The condensation thickens—tears, breath, the humidity of unlived desire fogging the glass until Rosita can barely see out, until we can barely see in.</p>
 
                 <div class="quote-block">
                     <p>"When a little girl has to count the days she begins when she's already old."</p>
-                    <cite>"” The Nurse, Act I</cite>
+                    <cite>— The Nurse, Act I</cite>
                 </div>
 
-                <p>The key moment: someone addresses Rosita as "Doña Rosita." That honorific marks her transformation"”no longer a young woman with prospects, now a spinster defined by her solitude. The diminutive "Rosita" with the formal "Doña" creates a contradiction: little rose, formally unmarried. A woman frozen between youth and age, between hope and resignation.</p>
+                <p>The key moment: someone addresses Rosita as "Doña Rosita." That honorific marks her transformation—no longer a young woman with prospects, now a spinster defined by her solitude. The diminutive "Rosita" with the formal "Doña" creates a contradiction: little rose, formally unmarried. A woman frozen between youth and age, between hope and resignation.</p>
             </div>
 
             <div>
                 <h3>The Grotesque Treatment of Women</h3>
-                <p>Lorca called this play an examination of "the grotesque treatment of women" in Spain. The greenhouse is that treatment made architectural"”a space designed to cultivate, display, and ultimately suffocate. Rosita is raised like a hothouse flower, protected from the world, trained to bloom for a specific viewer who never arrives.</p>
+                <p>Lorca called this play an examination of "the grotesque treatment of women" in Spain. The greenhouse is that treatment made architectural—a space designed to cultivate, display, and ultimately suffocate. Rosita is raised like a hothouse flower, protected from the world, trained to bloom for a specific viewer who never arrives.</p>
                 
                 <h3>The Uncle's Conservatory</h3>
-                <p>In Lorca's text, the uncle obsesses over rare flowers in his greenhouse"”particularly the rosa mutabile, which changes colour through the day and dies by nightfall. The design inverts this: Rosita doesn't tend the greenhouse, she IS the greenhouse. The cottage-as-conservatory makes her the cultivated specimen, the rare flower no one comes to see.</p>
+                <p>In Lorca's text, the uncle obsesses over rare flowers in his greenhouse—particularly the rosa mutabile, which changes colour through the day and dies by nightfall. The design inverts this: Rosita doesn't tend the greenhouse, she IS the greenhouse. The cottage-as-conservatory makes her the cultivated specimen, the rare flower no one comes to see.</p>
 
                 <h3>Granada, 1935</h3>
                 <p>Lorca premiered this in Barcelona, December 1935. Eight months later, he was murdered by Nationalist forces in Granada. This was the last play he saw staged. A work about women suffocated by provincial Spanish society, by a man who would be killed by the same forces. The charcoal-black, fire-salvaged quality of the guitar carries that weight: something has already burned, something is already ash, and the play is the slow cooling of embers.</p>

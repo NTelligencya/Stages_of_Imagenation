@@ -496,9 +496,64 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Site Navigation */
+        .site-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem 2rem;
+            z-index: 1000;
+            background: linear-gradient(to bottom, rgba(13, 13, 13, 0.95) 0%, rgba(13, 13, 13, 0.8) 70%, transparent 100%);
+        }
+        .site-nav .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .site-nav .nav-home {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--ink-white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .site-nav .nav-home:hover {
+            color: var(--dust-grey);
+        }
+        .site-nav .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .site-nav .nav-links a {
+            font-size: 0.85rem;
+            color: var(--ash-grey);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .site-nav .nav-links a:hover {
+            color: var(--ink-white);
+        }
     </style>
 </head>
 <body>
+
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-home">Stages of Imagenation</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Works</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
 
 <div class="page-wrapper">
 
@@ -509,8 +564,8 @@
             <h1 class="hero-title">The Good Person of Szechwan</h1>
             <p class="hero-subtitle">Bertolt Brecht, 1943</p>
             <div class="hero-description">
-                <p>A post-earthquake landscape where goodness is economically impossible. Grey rubble stretches across the stage"”stone mounds, collapsed dwellings, dust coating everything. A single road forks at centre stage: one path leads to a stone cavity with a painted billboard (the "tobacco shop"), the other to a bed of pink silk sheets beneath a grey gauze tent.</p>
-                <p>The only colour in this devastation is pink: the bedding, a velvet cross-body pouch, and a layer of fluorescent cotton-candy cloud resting on the exposed ceiling rafters"”the gods' heaven, doing nothing, going nowhere.</p>
+                <p>A post-earthquake landscape where goodness is economically impossible. Grey rubble stretches across the stage—stone mounds, collapsed dwellings, dust coating everything. A single road forks at centre stage: one path leads to a stone cavity with a painted billboard (the "tobacco shop"), the other to a bed of pink silk sheets beneath a grey gauze tent.</p>
+                <p>The only colour in this devastation is pink: the bedding, a velvet cross-body pouch, and a layer of fluorescent cotton-candy cloud resting on the exposed ceiling rafters—the gods' heaven, doing nothing, going nowhere.</p>
             </div>
         </div>
     </header>
@@ -532,30 +587,30 @@
             <div class="concept-block">
                 <h3>The Space</h3>
                 <p>The stage floor is covered entirely in stone mounds, gravel, and earthquake rubble. Grey dust coats everything. A single road of compressed rubble runs from upstage, forking at centre stage into two paths.</p>
-                <p>Stage right leads to a stone cavity with a painted billboard propped before it"”facade capitalism over a hole. Stage left leads to a small mound shaped into a bed beneath a grey gauze tent that blends with the surrounding stones.</p>
-                <p>The ceiling is exceptionally high and exposed"”visible rafters, industrial theatre bones. Resting on these rafters, a thick layer of fluorescent pink fluff stretches across the entire upper space.</p>
+                <p>Stage right leads to a stone cavity with a painted billboard propped before it—facade capitalism over a hole. Stage left leads to a small mound shaped into a bed beneath a grey gauze tent that blends with the surrounding stones.</p>
+                <p>The ceiling is exceptionally high and exposed—visible rafters, industrial theatre bones. Resting on these rafters, a thick layer of fluorescent pink fluff stretches across the entire upper space.</p>
             </div>
 
             <div class="concept-block">
                 <h3>Lighting Concept</h3>
-                <p>Predominantly cold, flat, harsh. The grey landscape under unforgiving light"”no shadows to hide in, no warmth. The pink cloud layer glows faintly from within or above, creating a soft rose wash that never quite reaches the stage floor.</p>
-                <p>When the gods depart at the end, the pink rises visibly into the flies"”stagehands' work exposed"”leaving only grey and industrial black. No transcendence, just mechanism.</p>
+                <p>Predominantly cold, flat, harsh. The grey landscape under unforgiving light—no shadows to hide in, no warmth. The pink cloud layer glows faintly from within or above, creating a soft rose wash that never quite reaches the stage floor.</p>
+                <p>When the gods depart at the end, the pink rises visibly into the flies—stagehands' work exposed—leaving only grey and industrial black. No transcendence, just mechanism.</p>
             </div>
 
             <div class="concept-block">
                 <h3>The Pink Elements</h3>
-                <p>The silk sheets in rubble aren't pathetic; they're an act of war against despair. The underwear drying on stones. The velvet pouch worn cross-body"”the only colour Shen Te carries, soft thing in a hard place.</p>
+                <p>The silk sheets in rubble aren't pathetic; they're an act of war against despair. The underwear drying on stones. The velvet pouch worn cross-body—the only colour Shen Te carries, soft thing in a hard place.</p>
                 <p>When the pouch is opened: stones. The gods' gift is rubble. She fills her one precious possession with the same grey devastation she's trying to escape.</p>
             </div>
 
             <div class="concept-block">
                 <h3>The Tobacco Shop</h3>
-                <p>A painted billboard propped against a stone cavity. Commerce as painted lie"”the "business" that's supposed to save her is just a word painted over rubble. The sign reads in Chinese characters, suggesting prosperity, but behind it is only a hole in the collapsed earth.</p>
+                <p>A painted billboard propped against a stone cavity. Commerce as painted lie—the "business" that's supposed to save her is just a word painted over rubble. The sign reads in Chinese characters, suggesting prosperity, but behind it is only a hole in the collapsed earth.</p>
             </div>
 
             <div class="concept-block full-width">
                 <h3>Atmospheric Notes</h3>
-                <p>Austerity pushed to the point of beauty. The grey should feel endless, exhausting, inescapable"”and then the pink shocks. Not hope exactly, but stubborn refusal. Evidence of a woman's life persisting: silk pillows in rubble, underwear drying in a disaster zone, a velvet pouch carried through broken glass.</p>
+                <p>Austerity pushed to the point of beauty. The grey should feel endless, exhausting, inescapable—and then the pink shocks. Not hope exactly, but stubborn refusal. Evidence of a woman's life persisting: silk pillows in rubble, underwear drying in a disaster zone, a velvet pouch carried through broken glass.</p>
                 <p>The audience should feel the gravel under their own feet, the dust in their throats, and understand why someone might sell her soul for a pair of shoes.</p>
             </div>
         </div>
@@ -567,7 +622,7 @@
             <div class="character-visual">
                 <figure>
                     <img src="assets/GPshente.png" alt="Shen Te in grey gauze smock with pink velvet pouch, standing in rubble" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);">
-                    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: var(--stone-grey); font-style: italic;">Shen Te at the intersection"”grey gauze, pink pouch, wounded bare feet</figcaption>
+                    <figcaption style="margin-top: 1rem; font-size: 0.9rem; color: var(--stone-grey); font-style: italic;">Shen Te at the intersection—grey gauze, pink pouch, wounded bare feet</figcaption>
                 </figure>
             </div>
             <div class="character-description">
@@ -576,23 +631,23 @@
 
                 <div class="character-detail">
                     <strong>Shen Te</strong>
-                    <p>Bare feet, dirty, wounded. Bloody bandages wrap around her soles and ankles"”makeshift dressings already soaked through and grey with dust. Her legs show cuts, scrapes, the evidence of walking through a world made of broken things. She bleeds to exist here.</p>
+                    <p>Bare feet, dirty, wounded. Bloody bandages wrap around her soles and ankles—makeshift dressings already soaked through and grey with dust. Her legs show cuts, scrapes, the evidence of walking through a world made of broken things. She bleeds to exist here.</p>
                 </div>
 
                 <div class="character-detail">
                     <strong>Shui Ta</strong>
-                    <p>Identical. Same smock, same pouch, same body. But sturdy working shoes on the feet. That's it. The transformation is protection"”the willingness to stop bleeding. The entire moral argument in footwear.</p>
+                    <p>Identical. Same smock, same pouch, same body. But sturdy working shoes on the feet. That's it. The transformation is protection—the willingness to stop bleeding. The entire moral argument in footwear.</p>
                 </div>
 
                 <div class="character-detail">
                     <strong>The Costume</strong>
-                    <p>A shapeless grey gauze smock"”thin, almost transparent in places, the fabric of the rubble-dwellers. It hangs to mid-calf, loose, offering no shape, no seduction. The gauze has the same dusty, ash-covered quality as everything else. She could almost disappear into the stones.</p>
+                    <p>A shapeless grey gauze smock—thin, almost transparent in places, the fabric of the rubble-dwellers. It hangs to mid-calf, loose, offering no shape, no seduction. The gauze has the same dusty, ash-covered quality as everything else. She could almost disappear into the stones.</p>
                     <p>Across her body, the pink velvet drawstring pouch. The only colour she carries. It sits against the grey gauze like a wound, like a heart worn outside the body.</p>
                 </div>
 
                 <div class="character-detail">
                     <strong>The Faceless Others</strong>
-                    <p>The peasants, relatives, freeloaders"”all in grey gauze, faceless, dusty. They emerge from rubble they're indistinguishable from. Not individuals with stories but need itself, materialising. Shen Te bleeds for people who barely exist as people.</p>
+                    <p>The peasants, relatives, freeloaders—all in grey gauze, faceless, dusty. They emerge from rubble they're indistinguishable from. Not individuals with stories but need itself, materialising. Shen Te bleeds for people who barely exist as people.</p>
                 </div>
             </div>
         </div>
@@ -608,15 +663,15 @@
         <div class="gallery-grid">
             <figure class="gallery-item wide">
                 <img src="assets/GPset2.png" alt="Alternative stage render">
-                <figcaption>The forking road from a different angle"”rubble landscape, pink cloud layer</figcaption>
+                <figcaption>The forking road from a different angle—rubble landscape, pink cloud layer</figcaption>
             </figure>
             <figure class="gallery-item">
                 <img src="assets/GPbed1.png" alt="The pink bed in rubble">
-                <figcaption>Pink silk sheets on a stone mound"”tenderness as defiance</figcaption>
+                <figcaption>Pink silk sheets on a stone mound—tenderness as defiance</figcaption>
             </figure>
             <figure class="gallery-item">
                 <img src="assets/GPbed2.png" alt="The bed detail">
-                <figcaption>The gauze tent and drying underwear"”evidence of life persisting</figcaption>
+                <figcaption>The gauze tent and drying underwear—evidence of life persisting</figcaption>
             </figure>
             <figure class="gallery-item wide">
                 <img src="assets/GPgal1.jpeg" alt="Stage detail">
@@ -651,25 +706,25 @@
         <div class="dramaturgy-content">
             <div>
                 <h3>The Central Contradiction</h3>
-                <p>Brecht's thesis is brutal: goodness is economically impossible under capitalism. The system demands exploitation to survive. You cannot be good and live. Shen Te isn't weak"”she's structurally trapped.</p>
+                <p>Brecht's thesis is brutal: goodness is economically impossible under capitalism. The system demands exploitation to survive. You cannot be good and live. Shen Te isn't weak—she's structurally trapped.</p>
                 <p>The forking road makes this visible. She stands at the intersection for every choice, and we watch her walk one way as herself (barefoot, bleeding, toward the bed) or the other as Shui Ta (sturdy shoes, toward the billboard facade).</p>
 
                 <div class="quote-block">
                     <p>"How can one be good and still live?"</p>
-                    <cite>"” The play's central question</cite>
+                    <cite>— The play's central question</cite>
                 </div>
 
-                <p>The gods represent hollow ideology that preaches virtue while ignoring material conditions. Their pink heaven floats above the devastation, decorative, inert. When they flee on their cloud at the end, we see the mechanism"”stagehands pulling pink batting into the flies. No transcendence. Just theatre.</p>
+                <p>The gods represent hollow ideology that preaches virtue while ignoring material conditions. Their pink heaven floats above the devastation, decorative, inert. When they flee on their cloud at the end, we see the mechanism—stagehands pulling pink batting into the flies. No transcendence. Just theatre.</p>
             </div>
 
             <div>
                 <h3>The Earthquake Setting</h3>
-                <p>Brecht set his play in a fictional "Szechwan" that was never meant to be realistic China"”it was a distancing device, allowing Western audiences to see their own economic systems reflected back. This production takes that abstraction further: post-earthquake devastation that could be anywhere, any time.</p>
+                <p>Brecht set his play in a fictional "Szechwan" that was never meant to be realistic China—it was a distancing device, allowing Western audiences to see their own economic systems reflected back. This production takes that abstraction further: post-earthquake devastation that could be anywhere, any time.</p>
                 <p>The rubble is universal. The collapse has already happened. Everyone is surviving in the ruins of something that broke long before the play began.</p>
 
                 <h3>The Shoes</h3>
                 <p>Shen Te bleeds to walk through the world. Shui Ta doesn't. That's capitalism's offer: protection costs you your humanity, but bare feet get shredded.</p>
-                <p>The audience watches the same person, same smock, same pink pouch"”and understands that the only difference between victim and exploiter is who's willing to let their feet be destroyed.</p>
+                <p>The audience watches the same person, same smock, same pink pouch—and understands that the only difference between victim and exploiter is who's willing to let their feet be destroyed.</p>
 
                 <h3>The Pouch Full of Stones</h3>
                 <p>The gods' gift is literally rubble. She carries the weight of the collapsed world in what looks like her only precious thing. Every time she opens it hoping for salvation, there's just more of the same grey devastation. Or she's been collecting stones herself, filling her one soft possession with hardness because that's what survival requires.</p>

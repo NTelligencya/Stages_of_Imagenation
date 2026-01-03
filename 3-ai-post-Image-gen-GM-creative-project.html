@@ -527,9 +527,64 @@
                 max-width: 300px;
             }
         }
+
+        /* Site Navigation */
+        .site-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem 2rem;
+            z-index: 1000;
+            background: linear-gradient(to bottom, rgba(13, 13, 13, 0.95) 0%, rgba(13, 13, 13, 0.8) 70%, transparent 100%);
+        }
+        .site-nav .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .site-nav .nav-home {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--ink-white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .site-nav .nav-home:hover {
+            color: var(--dust-grey);
+        }
+        .site-nav .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .site-nav .nav-links a {
+            font-size: 0.85rem;
+            color: var(--ash-grey);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .site-nav .nav-links a:hover {
+            color: var(--ink-white);
+        }
     </style>
 </head>
 <body>
+
+    <!-- Site Navigation -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-home">Stages of Imagenation</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Works</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
 
 <div class="page-wrapper">
 
@@ -541,8 +596,8 @@
             <p class="hero-subtitle">Tennessee Williams, 1944</p>
             <p class="hero-translation">A Memory Play in Seven Scenes</p>
             <div class="hero-description">
-                <p>A ruined church transformed into a memory-space where sacred architecture, institutional confinement, and domestic fragments collapse into a single image. Grey cobblestone walls rise to arched stained glass windows depicting blue roses"”the impossible flowers that became Laura's nickname. Light streams through, casting blue rose shadows across a concrete floor.</p>
-                <p>Wire mesh fencing lines the wings, containing life-size glass animals that watch the action below. At centre stage, a transparent glass rocking horse"”childhood frozen in fragile material, too precious to touch, too beautiful to survive.</p>
+                <p>A ruined church transformed into a memory-space where sacred architecture, institutional confinement, and domestic fragments collapse into a single image. Grey cobblestone walls rise to arched stained glass windows depicting blue roses—the impossible flowers that became Laura's nickname. Light streams through, casting blue rose shadows across a concrete floor.</p>
+                <p>Wire mesh fencing lines the wings, containing life-size glass animals that watch the action below. At centre stage, a transparent glass rocking horse—childhood frozen in fragile material, too precious to touch, too beautiful to survive.</p>
             </div>
         </div>
     </header>
@@ -557,38 +612,38 @@
     <section class="design-concept">
         <div class="concept-header">
             <h2>Design Concept</h2>
-            <p>This design inverts the domestic realism Williams' text suggests to create something far more psychologically true. The Wingfield apartment dissolves into a memory-space where sacred architecture, institutional confinement, and domestic fragments collapse into a single image. The family does not keep the glass animals"”they are enclosed by them.</p>
+            <p>This design inverts the domestic realism Williams' text suggests to create something far more psychologically true. The Wingfield apartment dissolves into a memory-space where sacred architecture, institutional confinement, and domestic fragments collapse into a single image. The family does not keep the glass animals—they are enclosed by them.</p>
         </div>
 
         <div class="concept-grid">
             <div class="concept-block">
                 <h3>The Space</h3>
-                <p>A row of arched stained glass windows depicting blue roses, set into grey cobblestone masonry suggesting a deconsecrated church or abandoned institutional building. Several panels are boarded over with rough wooden planks"”beautiful things partially obscured, light partially blocked.</p>
+                <p>A row of arched stained glass windows depicting blue roses, set into grey cobblestone masonry suggesting a deconsecrated church or abandoned institutional building. Several panels are boarded over with rough wooden planks—beautiful things partially obscured, light partially blocked.</p>
                 <p>The boarding is haphazard, desperate, as if someone tried to keep something out. Or in. The ruined church aesthetic makes this a sacred space that has been abandoned. Memory as desecrated cathedral.</p>
             </div>
 
             <div class="concept-block">
                 <h3>The Wire Enclosures</h3>
-                <p>Industrial wire mesh fencing rises to enclosure height"”the kind you'd see at a zoo or detention facility. Behind this fencing, visible but unreachable, stand life-size glass animals. Translucent sculptural presences catching light, watching.</p>
+                <p>Industrial wire mesh fencing rises to enclosure height—the kind you'd see at a zoo or detention facility. Behind this fencing, visible but unreachable, stand life-size glass animals. Translucent sculptural presences catching light, watching.</p>
                 <p>They are not being protected. They are doing the watching. The family moves freely in the central space; the animals observe from their cages. But who is truly imprisoned?</p>
             </div>
 
             <div class="concept-block">
                 <h3>Lighting Concept</h3>
-                <p>Blue light streaming through stained glass windows, casting blue rose shadow patterns across the grey concrete floor. These shadows should feel devotional"”light through cathedral windows falling on stone.</p>
+                <p>Blue light streaming through stained glass windows, casting blue rose shadow patterns across the grey concrete floor. These shadows should feel devotional—light through cathedral windows falling on stone.</p>
                 <p>Oil lamps provide warm amber pools where scenes play out. These islands of warmth exist within the cold blue void. Characters move between warmth and cold, between presence and memory.</p>
             </div>
 
             <div class="concept-block">
                 <h3>The Exit</h3>
-                <p>Where Williams calls for a fire escape"”Tom's liminal space between entrapment and freedom"”this design substitutes a blue neon "EMERGENCY EXIT" sign with an arrow pointing toward the rear wall, toward the stained glass, toward the past.</p>
+                <p>Where Williams calls for a fire escape—Tom's liminal space between entrapment and freedom—this design substitutes a blue neon "EMERGENCY EXIT" sign with an arrow pointing toward the rear wall, toward the stained glass, toward the past.</p>
                 <p>The sign is banal, institutional. But rendered in blue neon, it ties chromatically to the rose windows. And the arrow points not outward but inward, deeper into memory. The way out leads back.</p>
             </div>
 
             <div class="concept-block full-width">
                 <h3>Atmospheric Notes</h3>
-                <p>Cold, sacred, ruined. The space breathes abandonment and impossible beauty. The blue rose shadows should feel simultaneously romantic and funereal"”the kind of light that falls in empty churches, in dreams of places you can never return to.</p>
-                <p>The audience should feel the grey should feel endless, exhausting, inescapable"”and then the blue light shocks. Not hope exactly, but something devotional. Evidence of worship that has already failed.</p>
+                <p>Cold, sacred, ruined. The space breathes abandonment and impossible beauty. The blue rose shadows should feel simultaneously romantic and funereal—the kind of light that falls in empty churches, in dreams of places you can never return to.</p>
+                <p>The audience should feel the grey should feel endless, exhausting, inescapable—and then the blue light shocks. Not hope exactly, but something devotional. Evidence of worship that has already failed.</p>
             </div>
         </div>
     </section>
@@ -599,12 +654,12 @@
             <div class="element-visual">
                 <figure>
                     <img src="assets/GMhorse1.png" alt="The glass rocking horse at centre stage, catching blue light from the stained glass windows">
-                    <figcaption>The glass rocking horse"”childhood frozen in fragile material, too precious to touch</figcaption>
+                    <figcaption>The glass rocking horse—childhood frozen in fragile material, too precious to touch</figcaption>
                 </figure>
             </div>
             <div class="element-description">
                 <h2>The Glass Unicorn (Reimagined)</h2>
-                <p>Just off-centre stage sits a life-size glass rocking horse. This replaces Williams' tiny unicorn figurine"”the "freakishly" different piece Laura loves most"”with something simultaneously childlike and impossible.</p>
+                <p>Just off-centre stage sits a life-size glass rocking horse. This replaces Williams' tiny unicorn figurine—the "freakishly" different piece Laura loves most—with something simultaneously childlike and impossible.</p>
 
                 <div class="element-detail">
                     <strong>Contradiction Made Material</strong>
@@ -618,7 +673,7 @@
 
                 <div class="element-detail">
                     <strong>The Breaking</strong>
-                    <p>When Jim breaks the unicorn's horn in the text, he breaks this"”the impossible beautiful thing at the centre of Laura's world. In this design, the metaphor becomes monumental. The breaking of something this size would be catastrophic, irreversible, echoing through the ruined church like the collapse of everything fragile.</p>
+                    <p>When Jim breaks the unicorn's horn in the text, he breaks this—the impossible beautiful thing at the centre of Laura's world. In this design, the metaphor becomes monumental. The breaking of something this size would be catastrophic, irreversible, echoing through the ruined church like the collapse of everything fragile.</p>
                 </div>
 
                 <div class="element-detail">
@@ -639,35 +694,35 @@
         <div class="gallery-grid">
             <figure class="gallery-item wide">
                 <img src="assets/GMset1.png" alt="Alternative stage angle showing full architecture">
-                <figcaption>The memory-space from a different angle"”wire enclosures, stained glass, grey concrete</figcaption>
+                <figcaption>The memory-space from a different angle—wire enclosures, stained glass, grey concrete</figcaption>
             </figure>
             <figure class="gallery-item">
                 <img src="assets/GlassM.png" alt="Stage design front elevation">
-                <figcaption>Front elevation"”arched windows with blue roses, glass animals in wire enclosures</figcaption>
+                <figcaption>Front elevation—arched windows with blue roses, glass animals in wire enclosures</figcaption>
             </figure>
             <figure class="gallery-item">
                 <img src="assets/GlassM2.png" alt="Close-up of the glass horse prop">
-                <figcaption>The glass horse detail"”translucent, fragile, catching blue light</figcaption>
+                <figcaption>The glass horse detail—translucent, fragile, catching blue light</figcaption>
             </figure>
             <figure class="gallery-item">
                 <img src="assets/GlassM3.png" alt="Lighting elevation showing blue rose shadows">
-                <figcaption>Lighting elevation"”blue rose shadows across grey concrete</figcaption>
+                <figcaption>Lighting elevation—blue rose shadows across grey concrete</figcaption>
             </figure>
             <figure class="gallery-item">
                 <img src="assets/GMlight1.png" alt="Atmospheric lighting study">
-                <figcaption>Atmospheric study"”blue devotional light meeting amber warmth</figcaption>
+                <figcaption>Atmospheric study—blue devotional light meeting amber warmth</figcaption>
             </figure>
             <figure class="gallery-item wide">
                 <img src="assets/GMuni1.png" alt="The glass unicorn in context">
-                <figcaption>The unicorn in context"”the most precious thing, just off-centre</figcaption>
+                <figcaption>The unicorn in context—the most precious thing, just off-centre</figcaption>
             </figure>
             <figure class="gallery-item">
                 <img src="assets/GMgal1.png" alt="Production gallery image 1">
-                <figcaption>Production render"”the abandoned cathedral atmosphere</figcaption>
+                <figcaption>Production render—the abandoned cathedral atmosphere</figcaption>
             </figure>
             <figure class="gallery-item">
                 <img src="assets/GMgal2.png" alt="Production gallery image 2">
-                <figcaption>Detail"”wire mesh and glass, confinement and beauty</figcaption>
+                <figcaption>Detail—wire mesh and glass, confinement and beauty</figcaption>
             </figure>
         </div>
     </section>
@@ -677,11 +732,11 @@
         <div class="poster-content">
             <div class="poster-commentary">
                 <h2>Production Posters</h2>
-                <p>Marketing materials for a production that exists only in memory. The challenge: capture the play's central paradox"”the beauty of fragile things, the cruelty of holding onto them too tightly.</p>
+                <p>Marketing materials for a production that exists only in memory. The challenge: capture the play's central paradox—the beauty of fragile things, the cruelty of holding onto them too tightly.</p>
 
                 <div class="element-detail">
                     <strong>The Blue Rose Motif</strong>
-                    <p>Laura's nickname comes from a misheard word: "pleurosis" becomes "Blue Roses." The condition becomes identity. The impossible flower"”blue roses don't exist in nature"”becomes the visual signature. Beautiful, impossible, wrong.</p>
+                    <p>Laura's nickname comes from a misheard word: "pleurosis" becomes "Blue Roses." The condition becomes identity. The impossible flower—blue roses don't exist in nature—becomes the visual signature. Beautiful, impossible, wrong.</p>
                 </div>
 
                 <div class="element-detail">
@@ -691,7 +746,7 @@
 
                 <div class="element-detail">
                     <strong>Memory as Medium</strong>
-                    <p>Williams wrote that the play is "memory and is therefore seated predominantly in the heart." The posters suggest not a documentary record but a dream"”the way Tom Wingfield sees his past when he closes his eyes in strange cities, trying to forget.</p>
+                    <p>Williams wrote that the play is "memory and is therefore seated predominantly in the heart." The posters suggest not a documentary record but a dream—the way Tom Wingfield sees his past when he closes his eyes in strange cities, trying to forget.</p>
                 </div>
             </div>
             <div class="poster-grid">
@@ -714,14 +769,14 @@
         <div class="dramaturgy-content">
             <div>
                 <h3>Memory as Architecture</h3>
-                <p>Williams specified that the play should feel like memory"”"seated predominantly in the heart""”with gauze scrims, projected images, and lighting that isolates moments like photographs fading at the edges. Not realism. Impression. The past seen through glass, darkly.</p>
+                <p>Williams specified that the play should feel like memory—"seated predominantly in the heart—”with gauze scrims, projected images, and lighting that isolates moments like photographs fading at the edges. Not realism. Impression. The past seen through glass, darkly.</p>
 
                 <div class="quote-block">
                     <p>"I give you truth in the pleasant disguise of illusion."</p>
-                    <cite>"” Tom Wingfield, Opening Monologue</cite>
+                    <cite>— Tom Wingfield, Opening Monologue</cite>
                 </div>
 
-                <p>This design removes the pleasant disguise. The illusion remains. The truth is colder. The Wingfields don't live in an apartment"”they exist in the architecture of memory itself, a ruined church where worship has already failed.</p>
+                <p>This design removes the pleasant disguise. The illusion remains. The truth is colder. The Wingfields don't live in an apartment—they exist in the architecture of memory itself, a ruined church where worship has already failed.</p>
 
                 <h3>The Zoo Cages</h3>
                 <p>The wire mesh enclosures invert the relationship between keeper and kept. Laura's glass animals have grown monumental and now contain the family. What was once her private escape has become everyone's prison. The delicate things she collected now collect her.</p>
@@ -729,18 +784,18 @@
 
             <div>
                 <h3>The Guilt of Escape</h3>
-                <p>Tom's exit sign points backward, into the stained glass, into memory. Even leaving, he goes deeper in. The play's final image"”Laura blowing out candles, plunging the stage into darkness"”finds its scenic equivalent in the extinguishing of amber warmth, leaving only blue light and the watching glass.</p>
+                <p>Tom's exit sign points backward, into the stained glass, into memory. Even leaving, he goes deeper in. The play's final image—Laura blowing out candles, plunging the stage into darkness—finds its scenic equivalent in the extinguishing of amber warmth, leaving only blue light and the watching glass.</p>
 
                 <div class="quote-block">
-                    <p>"I didn't go to the moon, I went much further"”for time is the longest distance between two places."</p>
-                    <cite>"” Tom Wingfield, Closing Monologue</cite>
+                    <p>"I didn't go to the moon, I went much further—for time is the longest distance between two places."</p>
+                    <cite>— Tom Wingfield, Closing Monologue</cite>
                 </div>
 
                 <h3>Williams in 1944</h3>
-                <p>Williams wrote The Glass Menagerie while working in a St. Louis shoe factory, the same job his father forced on his sister Rose. Rose, like Laura, was painfully shy and fragile. In 1943, she was lobotomized. Williams never forgave himself for not preventing it. Every production of this play is, in some sense, an act of expiation"”the brother who got away, trying to reach back through glass and time.</p>
+                <p>Williams wrote The Glass Menagerie while working in a St. Louis shoe factory, the same job his father forced on his sister Rose. Rose, like Laura, was painfully shy and fragile. In 1943, she was lobotomized. Williams never forgave himself for not preventing it. Every production of this play is, in some sense, an act of expiation—the brother who got away, trying to reach back through glass and time.</p>
 
                 <h3>Blue Roses Don't Exist</h3>
-                <p>That's the point. Laura is something that shouldn't exist"”too delicate for the world, too beautiful for survival. The stained glass windows show impossible flowers because the play is about impossible things: impossible love, impossible escape, impossible forgiveness.</p>
+                <p>That's the point. Laura is something that shouldn't exist—too delicate for the world, too beautiful for survival. The stained glass windows show impossible flowers because the play is about impossible things: impossible love, impossible escape, impossible forgiveness.</p>
             </div>
         </div>
     </section>

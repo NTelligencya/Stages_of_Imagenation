@@ -48,6 +48,74 @@
 }
 
 /* =========================================
+   Site Navigation
+   ========================================= */
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(5, 5, 5, 0.95) 0%, rgba(5, 5, 5, 0.8) 70%, transparent 100%);
+}
+
+.site-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.site-nav .nav-home {
+    font-family: var(--font-subhead);
+    font-size: 1.1rem;
+    color: var(--ghost-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-nav .nav-home:hover {
+    color: var(--antique-gold);
+}
+
+.site-nav .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav .nav-links a {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--dust-grey);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    letter-spacing: 0.02em;
+}
+
+.site-nav .nav-links a:hover {
+    color: var(--antique-gold);
+}
+
+@media (max-width: 768px) {
+    .site-nav {
+        padding: 1rem;
+    }
+    
+    .site-nav .nav-links {
+        gap: 1rem;
+    }
+    
+    .site-nav .nav-links a {
+        font-size: 0.8rem;
+    }
+}
+
+/* =========================================
    Reset & Base
    ========================================= */
 * {
@@ -157,7 +225,7 @@ a:hover {
     text-align: center;
     position: relative;
     overflow: hidden;
-    background-image: url('hero-background.png');
+    background-image: url('assets/hero-background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
